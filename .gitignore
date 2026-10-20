@@ -9,4 +9,6 @@ check_widths.js
 test_*.js
 debug_*.js
 final-*.png
+fixed-*.png
 verify_*.js
+test_clean_*.js
