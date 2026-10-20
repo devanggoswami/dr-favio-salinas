@@ -225,8 +225,22 @@
 
     .brand {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 12px;
       flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 42px;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 5px rgba(30, 140, 140, 0.16));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
     }
 
     .brand-name {
@@ -461,6 +475,52 @@
       }
     }
 
+    .card-avatar-wrap {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .card-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--mist), var(--sea));
+      border: 4px solid var(--white);
+      box-shadow: 0 14px 32px -6px rgba(30, 140, 140, 0.28), 0 0 0 1.5px rgba(191, 230, 224, 0.85);
+      margin: 0 auto;
+    }
+
+    .card-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 14%;
+      display: block;
+    }
+
+    .card-avatar-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--sea);
+      box-shadow: 0 4px 10px rgba(30, 140, 140, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+    }
+
+    .card-avatar-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     .card-seal {
       width: 84px;
       height: 84px;
@@ -561,6 +621,56 @@
       font-size: 18px;
       line-height: 1.65;
       color: var(--ink);
+    }
+
+    .who-doctor-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 8px;
+      padding: 8px 20px 8px 10px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1.5px solid var(--sea);
+      border-radius: 9999px;
+      box-shadow: 0 4px 16px -2px rgba(30, 140, 140, 0.1);
+      width: fit-content;
+    }
+
+    .who-doc-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--teal);
+      flex-shrink: 0;
+      background: var(--mist);
+    }
+
+    .who-doc-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+
+    .who-doc-info {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .who-doc-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .who-doc-title {
+      font-size: 12.5px;
+      color: var(--soft);
+      line-height: 1.25;
     }
 
     .who-cards {
@@ -981,6 +1091,21 @@
       border-top: 1px solid rgba(191, 230, 224, 0.4);
     }
 
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo {
+      width: 32px;
+      height: 38px;
+      object-fit: contain;
+      opacity: 0.85;
+      filter: drop-shadow(0 2px 4px rgba(30, 140, 140, 0.15));
+    }
+
     .footer-text {
       font-size: 14px;
       color: var(--soft);
@@ -1021,6 +1146,11 @@
 
       .brand-title {
         font-size: 11.5px;
+      }
+
+      .brand-logo {
+        width: 30px;
+        height: 35px;
       }
 
       .nav-btn {
@@ -1140,12 +1270,49 @@
         gap: 6px;
       }
 
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-logo {
+        width: 26px;
+        height: 30px;
+      }
+
       .brand-name {
         font-size: 14px;
       }
 
       .brand-title {
         display: none;
+      }
+
+      .card-avatar {
+        width: 104px;
+        height: 104px;
+      }
+
+      .card-avatar-badge {
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+      }
+
+      .who-doctor-badge {
+        padding: 6px 14px 6px 8px;
+      }
+
+      .who-doc-avatar {
+        width: 38px;
+        height: 38px;
+      }
+
+      .who-doc-name {
+        font-size: 13.5px;
+      }
+
+      .who-doc-title {
+        font-size: 11.5px;
       }
 
       .nav-btn-call {
@@ -1295,8 +1462,11 @@
   <div class="header-wrap">
     <header class="navbar" role="banner">
       <a href="#home" class="brand" aria-label="Dr. Favio Salinas G., Urological Surgeon">
-        <span class="brand-name">Dr. Favio Salinas G.</span>
-        <span class="brand-title" data-i18n="brand_title">Urological Surgeon</span>
+        <img src="assets/clinic-logo.png" alt="Logo" class="brand-logo" width="36" height="42">
+        <div class="brand-text">
+          <span class="brand-name">Dr. Favio Salinas G.</span>
+          <span class="brand-title" data-i18n="brand_title">Urological Surgeon</span>
+        </div>
       </a>
 
       <nav aria-label="Primary navigation">
@@ -1347,7 +1517,14 @@
         <div class="hero-card-wrap">
           <div class="hero-glass-card tilt-card">
             <div class="tilt-glare"></div>
-            <div class="card-seal" aria-hidden="true">FS</div>
+            <div class="card-avatar-wrap">
+              <div class="card-avatar">
+                <img src="assets/dr-favio-salinas.png" alt="Dr. Favio Salinas G. - Urological Surgeon" class="doctor-photo">
+              </div>
+              <div class="card-avatar-badge" title="Certified Specialist">
+                <img src="assets/clinic-logo.png" alt="Dr. Favio Salinas G. Emblem">
+              </div>
+            </div>
             <h2 class="card-name">Dr. Favio Salinas G.</h2>
             <p class="card-subtitle" data-i18n="hero_card_sub">Urological Surgeon · Laparoscopic and robotic surgery</p>
             <div class="pills-group" aria-label="Professional medical licenses">
@@ -1374,6 +1551,15 @@
           <p data-i18n="who_p2">
             Dr. Favio Salinas G. is a dedicated and experienced urologist surgeon in Nuevo Laredo, Tamps., who works closely with his patients to maintain and improve their health.
           </p>
+          <div class="who-doctor-badge">
+            <div class="who-doc-avatar">
+              <img src="assets/dr-favio-salinas.png" alt="Dr. Favio Salinas G.">
+            </div>
+            <div class="who-doc-info">
+              <span class="who-doc-name">Dr. Favio Salinas G.</span>
+              <span class="who-doc-title" data-i18n="who_doc_spec">Certified Urologist & Laparoscopic Surgeon</span>
+            </div>
+          </div>
         </div>
 
         <!-- Right Column: 3 Stacked Cards with 3D Touch -->
@@ -1622,7 +1808,8 @@
 
   <!-- 8. Footer -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
+    <div class="container footer-content">
+      <img src="assets/clinic-logo.png" alt="Dr. Favio Salinas G. Logo" class="footer-logo" width="32" height="38">
       <p class="footer-text" data-i18n="footer_text">
         © Dr. Favio Salinas G. · Urological Surgeon · Ced. Prof. 4967773 / 7308544 / 09610780
       </p>
@@ -1657,6 +1844,7 @@
           who_c2_text: "We believe in providing comprehensive care services to our patients in a pleasant and relaxed environment.",
           who_c3_title: "Certified surgeon",
           who_c3_text: "Rigorous surgical experience endorsed by the Mexican National Council of Urology AC.",
+          who_doc_spec: "Certified Urologist & Laparoscopic Surgeon",
           serv_title: "Care for the whole family",
           serv_sub: "Choose who the visit is for.",
           tab_men: "Men",
@@ -1739,6 +1927,7 @@
           who_c2_text: "Brindamos servicios de atención médica integral a nuestros pacientes en un ambiente agradable y sereno.",
           who_c3_title: "Cirujano certificado",
           who_c3_text: "Amplia trayectoria quirúrgica avalada por el Consejo Nacional Mexicano de Urología AC.",
+          who_doc_spec: "Cirujano Urólogo Certificado y Cirugía Laparoscópica",
           serv_title: "Atención para toda la familia",
           serv_sub: "Elija para quién es la consulta.",
           tab_men: "Hombres",

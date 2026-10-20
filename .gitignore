@@ -8,3 +8,5 @@ capture_*.js
 check_widths.js
 test_*.js
 debug_*.js
+final-*.png
+verify_*.js
