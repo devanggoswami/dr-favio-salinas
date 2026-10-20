@@ -495,7 +495,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 14%;
+      object-position: 48% 22%;
+      transform: scale(1.22);
       display: block;
     }
 
@@ -1132,11 +1133,11 @@
       }
 
       .header-wrap {
-        padding: 0 8px;
+        padding: 0 12px;
       }
 
       .navbar {
-        padding: 8px 12px;
+        padding: 8px 14px;
         gap: 8px;
       }
 
@@ -1158,86 +1159,153 @@
         font-size: 13px;
       }
 
+      /* Hero Section: Move Doctor Profile Card to TOP on mobile */
+      .hero-section {
+        padding-top: 24px;
+        padding-bottom: 56px;
+      }
+
       .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 28px !important;
+      }
+
+      .hero-card-wrap {
+        order: -1 !important; /* Move Doctor Intro Card to the very top in mobile */
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 4px !important;
+      }
+
+      .hero-glass-card {
+        width: 100% !important;
+        max-width: 380px !important;
+        padding: 28px 22px !important;
+        border-radius: 28px !important;
+        box-sizing: border-box !important;
+        box-shadow: 0 16px 40px -10px rgba(30, 140, 140, 0.16), 0 4px 16px rgba(46, 74, 87, 0.05) !important;
+        margin: 0 auto !important;
+      }
+
+      .card-avatar-wrap {
+        margin-bottom: 18px !important;
+      }
+
+      .card-avatar {
+        width: 112px !important;
+        height: 112px !important;
+        border-width: 3.5px !important;
+      }
+
+      .card-avatar img {
+        transform: scale(1.22) !important;
+        object-position: 48% 22% !important;
+      }
+
+      .card-avatar-badge {
+        width: 34px !important;
+        height: 34px !important;
+        padding: 4px !important;
+        bottom: 1px !important;
+        right: 1px !important;
+      }
+
+      .card-name {
+        font-size: 21px !important;
+        margin-bottom: 5px !important;
+      }
+
+      .card-subtitle {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 18px !important;
+        max-width: 290px !important;
+      }
+
+      .pills-group {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        max-width: 310px !important;
+        margin: 0 auto 18px !important;
+      }
+
+      .mist-pill {
+        font-size: 11px !important;
+        padding: 5px 11px !important;
+        white-space: nowrap !important;
+      }
+
+      .card-cert {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
       }
 
       .hero-content {
-        text-align: center;
-        align-items: center;
+        order: 1 !important;
+        text-align: center !important;
+        align-items: center !important;
       }
 
       .hero-title {
-        font-size: clamp(26px, 6.5vw, 38px);
-        line-height: 1.2;
-      }
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .who-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .holep-card {
-        grid-template-columns: 1fr;
-        padding: 32px 20px;
-        gap: 24px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-info-card,
-      .contact-action-card {
-        padding: 28px 18px;
-      }
-    }
-
-    /* 2-Column Mobile Grid for Services (Fixes long 1-by-1 scrolling) */
-    @media (max-width: 768px) {
-      .tab-panel {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-      }
-
-      .service-card {
-        padding: 14px 10px !important;
-        border-radius: 16px !important;
-        gap: 8px !important;
-        min-width: 0 !important;
-        box-shadow: 0 4px 12px -2px rgba(46, 74, 87, 0.04) !important;
-      }
-
-      .service-icon-tile {
-        width: 32px !important;
-        height: 32px !important;
-        border-radius: 10px !important;
-        font-size: 16px !important;
-      }
-
-      .service-card-title {
-        font-size: 13px !important;
+        font-size: clamp(26px, 6.5vw, 36px) !important;
         line-height: 1.25 !important;
       }
 
-      .service-card p {
-        font-size: 11px !important;
-        line-height: 1.35 !important;
+      .hero-lead {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        max-width: 100% !important;
+      }
+
+      .hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+        margin-top: 6px !important;
+      }
+
+      .hero-actions .btn {
+        width: 100% !important;
+        padding: 13px 20px !important;
+        font-size: 15px !important;
+      }
+
+      /* Who We Are */
+      .who-section {
+        padding: 60px 0 !important;
+      }
+
+      .who-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 28px !important;
+      }
+
+      .who-copy {
+        text-align: center !important;
+      }
+
+      .who-copy p {
+        font-size: 15.5px !important;
+        line-height: 1.6 !important;
       }
 
       .who-cards {
-        gap: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
       }
 
       .stack-card {
-        padding: 16px 18px !important;
-        border-radius: 18px !important;
+        padding: 22px 20px !important;
+        border-radius: 22px !important;
         transform: none !important;
+        text-align: left !important;
       }
 
       .stack-card.card-peach {
@@ -1245,203 +1313,249 @@
       }
 
       .stack-card-title {
-        font-size: 15px !important;
-        margin-bottom: 4px !important;
+        font-size: 17px !important;
+        margin-bottom: 6px !important;
       }
 
       .stack-card p {
+        font-size: 13.5px !important;
+        line-height: 1.5 !important;
+      }
+
+      /* Services Section: Sleek Horizontal Service List Cards */
+      .services-section {
+        padding: 64px 0 !important;
+      }
+
+      .services-header {
+        margin-bottom: 24px !important;
+      }
+
+      .tab-list {
+        margin-bottom: 24px !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        padding: 4px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .tab-trigger {
+        flex: 1 !important;
+        padding: 8px 12px !important;
+        font-size: 13.5px !important;
+        text-align: center !important;
+      }
+
+      .tab-panel {
+        display: none;
+      }
+
+      .tab-panel.active {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+
+      .service-card {
+        display: grid !important;
+        grid-template-columns: 44px 1fr !important;
+        grid-template-rows: auto auto !important;
+        column-gap: 14px !important;
+        row-gap: 4px !important;
+        align-items: center !important;
+        padding: 16px 18px !important;
+        border-radius: 20px !important;
+        background: var(--white) !important;
+        border: 1.5px solid var(--sea) !important;
+        box-shadow: 0 4px 14px -3px rgba(46, 74, 87, 0.05) !important;
+        text-align: left !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        transform: none !important;
+      }
+
+      .service-card:hover {
+        transform: translateY(-2px) !important;
+      }
+
+      .service-icon-tile {
+        grid-row: 1 / 3 !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        font-size: 20px !important;
+        margin: 0 !important;
+      }
+
+      .service-card-title {
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        color: var(--ink) !important;
+        line-height: 1.3 !important;
+        margin: 0 !important;
+      }
+
+      .service-card p {
         font-size: 12.5px !important;
+        color: var(--soft) !important;
         line-height: 1.4 !important;
+        margin: 0 !important;
+      }
+
+      /* HOLEP Feature Band */
+      .holep-section {
+        padding: 60px 0 !important;
+      }
+
+      .holep-card {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 30px 20px !important;
+        border-radius: 26px !important;
+        gap: 22px !important;
+        text-align: center !important;
+      }
+
+      .holep-title {
+        font-size: 22px !important;
+        line-height: 1.25 !important;
+      }
+
+      .holep-content p {
+        font-size: 14px !important;
+        line-height: 1.55 !important;
+      }
+
+      .holep-content .btn {
+        width: 100% !important;
+      }
+
+      .check-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        text-align: left !important;
+      }
+
+      .check-item {
+        padding: 12px 14px !important;
+        font-size: 13.5px !important;
+        border-radius: 14px !important;
+      }
+
+      /* Conditions */
+      .conditions-section {
+        padding: 60px 0 !important;
+      }
+
+      .chips-wrap {
+        gap: 8px !important;
+        justify-content: center !important;
+      }
+
+      .chip {
+        padding: 8px 14px !important;
+        font-size: 13px !important;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 60px 0 !important;
+      }
+
+      .contact-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+
+      .contact-info-card,
+      .contact-action-card {
+        padding: 26px 20px !important;
+        border-radius: 24px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .action-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+
+      .action-buttons .btn {
+        width: 100% !important;
+      }
+
+      .social-pills {
+        justify-content: center !important;
+        gap: 8px !important;
+      }
+
+      .social-pill {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
       }
     }
 
     @media (max-width: 640px) {
       .container {
-        padding-left: 14px;
-        padding-right: 14px;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
       }
 
       .header-wrap {
-        padding: 0 6px;
+        padding: 0 8px !important;
       }
 
       .navbar {
-        padding: 6px 10px;
-        gap: 6px;
+        padding: 7px 10px !important;
+        gap: 6px !important;
       }
 
       .brand {
-        gap: 8px;
+        gap: 8px !important;
       }
 
       .brand-logo {
-        width: 26px;
-        height: 30px;
+        width: 28px !important;
+        height: 32px !important;
       }
 
       .brand-name {
-        font-size: 14px;
+        font-size: 14px !important;
       }
 
       .brand-title {
-        display: none;
-      }
-
-      .card-avatar {
-        width: 104px;
-        height: 104px;
-      }
-
-      .card-avatar-badge {
-        width: 32px;
-        height: 32px;
-        padding: 4px;
-      }
-
-      .who-doctor-badge {
-        padding: 6px 14px 6px 8px;
-      }
-
-      .who-doc-avatar {
-        width: 38px;
-        height: 38px;
-      }
-
-      .who-doc-name {
-        font-size: 13.5px;
-      }
-
-      .who-doc-title {
-        font-size: 11.5px;
+        display: none !important;
       }
 
       .nav-btn-call {
-        display: none !important; /* Hide redundant call button from top navbar on mobile */
+        display: none !important;
       }
 
       .nav-btn {
-        padding: 6px 11px;
-        font-size: 12px;
-      }
-
-      .lang-btn {
-        padding: 3px 6px;
-        font-size: 10.5px;
-      }
-
-      .hero-section {
-        padding-top: 28px;
-        padding-bottom: 48px;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-      }
-
-      .hero-actions .btn {
-        width: 100%;
-        padding: 12px 18px;
-        font-size: 14.5px;
-      }
-
-      .hero-glass-card {
-        padding: 22px 14px !important;
-        border-radius: 22px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-      }
-
-      .card-name {
-        font-size: 20px !important;
-      }
-
-      .card-subtitle {
+        padding: 7px 12px !important;
         font-size: 12.5px !important;
       }
 
-      .pills-group {
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 6px !important;
-      }
-
-      .mist-pill {
+      .lang-btn {
+        padding: 3px 6px !important;
         font-size: 10.5px !important;
-        padding: 4px 8px !important;
       }
 
-      .tab-list {
-        width: 100%;
-        justify-content: center;
-        padding: 4px;
+      .hero-glass-card {
+        max-width: 100% !important;
+        padding: 24px 16px !important;
+        border-radius: 24px !important;
       }
 
-      .tab-trigger {
-        padding: 7px 14px;
-        font-size: 13px;
-      }
-
-      .holep-card {
-        border-radius: 26px;
-        padding: 26px 16px;
-        gap: 18px;
-      }
-
-      .holep-title {
-        font-size: 22px !important;
-      }
-
-      .holep-content p {
-        font-size: 14.5px !important;
-      }
-
-      .check-item {
-        padding: 12px 14px;
-        font-size: 13.5px;
-        border-radius: 14px;
-      }
-
-      .holep-content .btn {
-        width: 100%;
-      }
-
-      .action-buttons {
-        flex-direction: column;
-      }
-
-      .action-buttons .btn {
-        width: 100%;
-      }
-
-      .contact-info-card,
-      .contact-action-card {
-        border-radius: 22px;
-        padding: 24px 16px;
-      }
-
-      .chip {
-        padding: 8px 14px;
-        font-size: 12.5px;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .tab-panel {
-        gap: 6px !important;
-      }
-
-      .service-card {
-        padding: 10px 8px !important;
-      }
-
-      .service-card-title {
-        font-size: 12px !important;
-      }
-
-      .service-card p {
-        font-size: 10.5px !important;
+      .card-avatar {
+        width: 104px !important;
+        height: 104px !important;
       }
     }
 
@@ -1551,15 +1665,6 @@
           <p data-i18n="who_p2">
             Dr. Favio Salinas G. is a dedicated and experienced urologist surgeon in Nuevo Laredo, Tamps., who works closely with his patients to maintain and improve their health.
           </p>
-          <div class="who-doctor-badge">
-            <div class="who-doc-avatar">
-              <img src="assets/dr-favio-salinas.png" alt="Dr. Favio Salinas G.">
-            </div>
-            <div class="who-doc-info">
-              <span class="who-doc-name">Dr. Favio Salinas G.</span>
-              <span class="who-doc-title" data-i18n="who_doc_spec">Certified Urologist & Laparoscopic Surgeon</span>
-            </div>
-          </div>
         </div>
 
         <!-- Right Column: 3 Stacked Cards with 3D Touch -->

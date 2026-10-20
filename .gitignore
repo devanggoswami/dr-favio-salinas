@@ -10,5 +10,8 @@ test_*.js
 debug_*.js
 final-*.png
 fixed-*.png
+mobile-*.png
+new-mobile-*.png
 verify_*.js
 test_clean_*.js
+inspect_*.js
