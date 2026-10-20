@@ -198,24 +198,29 @@
       opacity: 1;
     }
 
-    /* 1. Floating Sticky Glass Pill Navbar */
+    /* 1. Floating Sticky Glass Pill Navbar (Fixed so it sticks reliably on scroll) */
     .header-wrap {
-      position: sticky;
+      position: fixed;
       top: 12px;
-      z-index: 100;
+      left: 0;
+      right: 0;
+      z-index: 1000;
       padding: 0 16px;
       width: 100%;
+      pointer-events: none;
+      transition: top 0.25s ease;
     }
 
     .navbar {
+      pointer-events: auto;
       max-width: 1070px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.72);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.95);
       border-radius: 9999px;
-      box-shadow: 0 12px 32px -8px rgba(46, 74, 87, 0.08);
+      box-shadow: 0 12px 36px -8px rgba(46, 74, 87, 0.12), 0 2px 8px rgba(30, 140, 140, 0.04);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -322,7 +327,7 @@
     /* 2. Hero Section */
     .hero-section {
       position: relative;
-      padding-top: 60px;
+      padding-top: 104px;
       padding-bottom: 96px;
       overflow: hidden;
       contain: paint;
@@ -618,60 +623,54 @@
       margin-top: 8px;
     }
 
-    .who-copy p {
-      font-size: 18px;
-      line-height: 1.65;
-      color: var(--ink);
-    }
-
-    .who-doctor-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      margin-top: 8px;
-      padding: 8px 20px 8px 10px;
-      background: rgba(255, 255, 255, 0.88);
+    .who-mission-card {
+      background: var(--white);
       border: 1.5px solid var(--sea);
-      border-radius: 9999px;
-      box-shadow: 0 4px 16px -2px rgba(30, 140, 140, 0.1);
-      width: fit-content;
-    }
-
-    .who-doc-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid var(--teal);
-      flex-shrink: 0;
-      background: var(--mist);
-    }
-
-    .who-doc-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 15%;
-      display: block;
-    }
-
-    .who-doc-info {
+      border-radius: 28px;
+      padding: 32px 28px;
+      box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
+      gap: 16px;
       text-align: left;
     }
 
-    .who-doc-name {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--ink);
-      line-height: 1.2;
+    .mission-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .who-doc-title {
+    .mission-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--mist);
+      color: var(--teal-d);
       font-size: 12.5px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+    }
+
+    .mission-text-lead {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .mission-divider {
+      height: 1px;
+      background: rgba(191, 230, 224, 0.6);
+      width: 100%;
+    }
+
+    .mission-text-sub {
+      font-size: 15px;
+      line-height: 1.6;
       color: var(--soft);
-      line-height: 1.25;
     }
 
     .who-cards {
@@ -1277,32 +1276,53 @@
 
       /* Who We Are */
       .who-section {
-        padding: 60px 0 !important;
+        padding: 56px 0 !important;
       }
 
       .who-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 28px !important;
+        gap: 16px !important;
       }
 
       .who-copy {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
         text-align: center !important;
       }
 
-      .who-copy p {
-        font-size: 15.5px !important;
-        line-height: 1.6 !important;
+      .who-copy .section-title {
+        text-align: center !important;
+        margin-bottom: 0 !important;
+      }
+
+      .who-mission-card {
+        padding: 22px 18px !important;
+        border-radius: 22px !important;
+        gap: 12px !important;
+        text-align: left !important;
+        box-shadow: 0 4px 14px -2px rgba(46, 74, 87, 0.05) !important;
+      }
+
+      .mission-text-lead {
+        font-size: 14.5px !important;
+        line-height: 1.55 !important;
+      }
+
+      .mission-text-sub {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
       }
 
       .who-cards {
         display: flex !important;
         flex-direction: column !important;
-        gap: 14px !important;
+        gap: 12px !important;
       }
 
       .stack-card {
-        padding: 22px 20px !important;
+        padding: 20px 18px !important;
         border-radius: 22px !important;
         transform: none !important;
         text-align: left !important;
@@ -1656,15 +1676,22 @@
     <!-- 3. Who We Are Section -->
     <section id="about" class="who-section" aria-labelledby="who-heading">
       <div class="container who-grid">
-        <!-- Left Column -->
+        <!-- Left Column: Heading & Mission Card -->
         <div class="who-copy">
           <h2 id="who-heading" class="section-title" data-i18n="who_title">Who we are</h2>
-          <p data-i18n="who_p1">
-            Our mission is to provide a personalized service with high quality care to cover all your needs in the treatment and prevention of urological diseases.
-          </p>
-          <p data-i18n="who_p2">
-            Dr. Favio Salinas G. is a dedicated and experienced urologist surgeon in Nuevo Laredo, Tamps., who works closely with his patients to maintain and improve their health.
-          </p>
+          <div class="who-mission-card tilt-card">
+            <div class="tilt-glare"></div>
+            <div class="mission-header">
+              <span class="mission-pill" data-i18n="who_mission_tag">Mission & Philosophy</span>
+            </div>
+            <p class="mission-text-lead" data-i18n="who_p1">
+              Our mission is to provide a personalized service with high quality care to cover all your needs in the treatment and prevention of urological diseases.
+            </p>
+            <div class="mission-divider"></div>
+            <p class="mission-text-sub" data-i18n="who_p2">
+              Dr. Favio Salinas G. is a dedicated and experienced urologist surgeon in Nuevo Laredo, Tamps., who works closely with his patients to maintain and improve their health.
+            </p>
+          </div>
         </div>
 
         <!-- Right Column: 3 Stacked Cards with 3D Touch -->
@@ -1941,6 +1968,7 @@
           hero_card_sub: "Urological Surgeon · Laparoscopic and robotic surgery",
           hero_card_cert: "Certified by the Mexican National Council of Urology AC.",
           who_title: "Who we are",
+          who_mission_tag: "Mission & Philosophy",
           who_p1: "Our mission is to provide a personalized service with high quality care to cover all your needs in the treatment and prevention of urological diseases.",
           who_p2: "Dr. Favio Salinas G. is a dedicated and experienced urologist surgeon in Nuevo Laredo, Tamps., who works closely with his patients to maintain and improve their health.",
           who_c1_title: "Personalized care",
@@ -2024,6 +2052,7 @@
           hero_card_sub: "Cirujano Urólogo · Cirugía laparoscópica y robótica",
           hero_card_cert: "Certificado por el Consejo Nacional Mexicano de Urología AC.",
           who_title: "Quiénes somos",
+          who_mission_tag: "Misión y Filosofía",
           who_p1: "Nuestra misión es brindar un servicio personalizado con alta calidad médica para cubrir todas sus necesidades en el tratamiento y prevención de enfermedades urológicas.",
           who_p2: "El Dr. Favio Salinas G. es un cirujano urólogo dedicado y experimentado en Nuevo Laredo, Tamps., quien trabaja estrechamente con sus pacientes para mantener y mejorar su salud.",
           who_c1_title: "Atención personalizada",
