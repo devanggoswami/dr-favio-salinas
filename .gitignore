@@ -15,3 +15,6 @@ new-mobile-*.png
 verify_*.js
 test_clean_*.js
 inspect_*.js
+record_*.js
+videos/
+package-lock.json
