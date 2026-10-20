@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Schedule Consultation · Dr. Favio Salinas G. · Urological Surgeon</title>
+  <meta name="description" content="Book your urological consultation with Dr. Favio Salinas G. in Nuevo Laredo, Tamps. Choose your specialized service, select date & time, or book a General OPD consultation.">
+
+  <!-- Google Fonts: Fraunces & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pearl: #F7FBFA;
+      --mist: #E3F4F1;
+      --sea: #BFE6E0;
+      --peach: #FFD9C7;
+      --lilac: #E6E0FA;
+      --teal: #1E8C8C;
+      --teal-d: #176F73;
+      --teal-light: #EBF8F7;
+      --ink: #2E4A57;
+      --soft: #5E7B86;
+      --white: #FFFFFF;
+      --border-subtle: #D8ECE9;
+      --shadow-soft: 0 4px 20px -4px rgba(46, 74, 87, 0.06);
+      --font-heading: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--pearl);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      background-color: var(--pearl);
+      color: var(--ink);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    p {
+      color: var(--soft);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Minimal Clean Header */
+    .header-wrap {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      padding: 0 16px;
+      margin-bottom: 24px;
+    }
+
+    .navbar {
+      max-width: 960px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px 10px 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-seal {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      font-size: 12px;
+      color: var(--soft);
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-back {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--soft);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-subtle);
+      background: var(--white);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-back:hover {
+      color: var(--teal);
+      border-color: var(--teal);
+    }
+
+    .btn-call {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--white);
+      background: var(--teal);
+      padding: 9px 18px;
+      border-radius: 9999px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-call:hover {
+      background: var(--teal-d);
+    }
+
+    /* Language Toggle Switch */
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      background: var(--mist);
+      border: 1px solid var(--border-subtle);
+      padding: 3px;
+      border-radius: 9999px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+
+    .lang-btn {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--soft);
+      background: transparent;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-btn:hover {
+      color: var(--teal);
+    }
+
+    .lang-btn.active {
+      background: var(--white);
+      color: var(--teal-d);
+      box-shadow: 0 2px 8px rgba(46, 74, 87, 0.1);
+    }
+
+    /* Page Intro */
+    .page-intro {
+      text-align: center;
+      margin: 20px auto 32px;
+      max-width: 620px;
+    }
+
+    .page-title {
+      font-size: clamp(26px, 3.5vw, 34px);
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .page-desc {
+      font-size: 15px;
+      color: var(--soft);
+      line-height: 1.5;
+    }
+
+    /* Stepper Bar */
+    .stepper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--soft);
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+      cursor: pointer;
+    }
+
+    .step-item.active {
+      opacity: 1;
+      color: var(--ink);
+    }
+
+    .step-item.completed {
+      opacity: 1;
+      color: var(--teal);
+    }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--mist);
+      color: var(--soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .step-item.active .step-num {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .step-item.completed .step-num {
+      background: var(--sea);
+      color: var(--teal-d);
+    }
+
+    .step-line {
+      width: 28px;
+      height: 2px;
+      background: var(--border-subtle);
+    }
+
+    /* Clean Form & Card Styles */
+    .clean-card {
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 24px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: var(--teal-d);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--ink);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    /* Flow Step Sections */
+    .flow-step {
+      display: none;
+      margin-bottom: 50px;
+    }
+
+    .flow-step.active {
+      display: block;
+    }
+
+    /* Step Headings */
+    .step-heading {
+      font-size: 20px;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .step-sub {
+      font-size: 14.5px;
+      color: var(--soft);
+      margin-bottom: 20px;
+    }
+
+    /* OPD Card (Clean, Medical-grade) */
+    .opd-card {
+      background: #FAFCFC;
+      border: 1.5px solid var(--teal);
+      border-radius: 20px;
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      cursor: pointer;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      position: relative;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .opd-card.selected {
+      background: var(--teal-light);
+      border-color: var(--teal-d);
+    }
+
+    .opd-badge {
+      position: absolute;
+      top: -11px;
+      right: 24px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 9999px;
+    }
+
+    .clean-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--mist);
+      color: var(--teal-d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .clean-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+    }
+
+    .opd-details {
+      flex: 1;
+    }
+
+    .opd-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .opd-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .opd-text {
+      font-size: 14px;
+      color: var(--soft);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .select-radio {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      flex-shrink: 0;
+    }
+
+    .service-card.selected .select-radio,
+    .opd-card.selected .select-radio {
+      border-color: var(--teal);
+      background: var(--teal);
+    }
+
+    .select-radio::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--white);
+      display: none;
+    }
+
+    .service-card.selected .select-radio::after,
+    .opd-card.selected .select-radio::after {
+      display: block;
+    }
+
+    .opd-extra-input {
+      margin-top: 12px;
+      display: none;
+    }
+
+    .opd-card.selected .opd-extra-input {
+      display: block;
+    }
+
+    .clean-input {
+      width: 100%;
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--ink);
+      resize: none;
+      outline: none;
+    }
+
+    .clean-input:focus {
+      border-color: var(--teal);
+    }
+
+    /* Standard Service Cards Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .service-card:hover {
+      border-color: var(--teal);
+    }
+
+    .service-card.selected {
+      border-color: var(--teal);
+      background: var(--teal-light);
+    }
+
+    .service-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .service-title {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .service-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--soft);
+    }
+
+    /* STEP 2: Calendar & Time */
+    .datetime-container {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .calendar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .calendar-month-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .calendar-nav-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--mist);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--ink);
+      font-size: 16px;
+    }
+
+    .calendar-nav-btn:hover {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+      text-align: center;
+    }
+
+    .cal-day-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--soft);
+      padding-bottom: 6px;
+    }
+
+    .cal-day-cell {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.15s ease;
+    }
+
+    .cal-day-cell:hover:not(.disabled) {
+      background: var(--mist);
+      color: var(--teal-d);
+    }
+
+    .cal-day-cell.selected {
+      background: var(--teal) !important;
+      color: var(--white) !important;
+    }
+
+    .cal-day-cell.disabled {
+      color: #CFDFDC;
+      cursor: not-allowed;
+      background: transparent !important;
+    }
+
+    .slots-date-badge {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--teal-d);
+      background: var(--teal-light);
+      padding: 5px 12px;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .slots-group-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--soft);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .slots-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .time-slot-btn {
+      padding: 9px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s ease;
+    }
+
+    .time-slot-btn:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .time-slot-btn.selected {
+      background: var(--teal);
+      color: var(--white);
+      border-color: var(--teal);
+    }
+
+    /* STEP 3: Form */
+    .form-wrap {
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+
+    .form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .form-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .form-input {
+      width: 100%;
+      background: var(--pearl);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 11px 16px;
+      font-family: var(--font-body);
+      font-size: 14.5px;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: var(--teal);
+      background: var(--white);
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .modality-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .modality-pill {
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      transition: border-color 0.15s ease;
+    }
+
+    .modality-pill.selected {
+      border-color: var(--teal);
+      background: var(--teal-light);
+    }
+
+    .modality-pill strong {
+      font-size: 13.5px;
+      color: var(--ink);
+      display: block;
+    }
+
+    .modality-pill small {
+      font-size: 12px;
+      color: var(--soft);
+    }
+
+    /* STEP 4: Confirmation Ticket */
+    .ticket-wrap {
+      max-width: 560px;
+      margin: 0 auto 36px;
+    }
+
+    .ticket-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed var(--border-subtle);
+      margin-bottom: 20px;
+    }
+
+    .ticket-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 14.5px;
+      margin-bottom: 12px;
+    }
+
+    .ticket-row span:first-child {
+      color: var(--soft);
+    }
+
+    .ticket-row span:last-child {
+      font-weight: 600;
+      color: var(--ink);
+      text-align: right;
+    }
+
+    .ticket-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .btn-whatsapp {
+      background: #178A7E;
+      color: var(--white);
+    }
+
+    .btn-whatsapp:hover {
+      background: #126D64;
+    }
+
+    .step-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .datetime-container, .form-row-2, .modality-options {
+        grid-template-columns: 1fr;
+      }
+      .stepper {
+        gap: 6px;
+      }
+      .step-item span:not(.step-num) {
+        display: none;
+      }
+      .brand-subtitle {
+        display: none;
+      }
+      .navbar {
+        padding: 8px 12px;
+        gap: 8px;
+      }
+      .nav-actions {
+        gap: 6px;
+      }
+      .btn-call {
+        padding: 7px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+      .btn-back {
+        padding: 7px 10px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+      .lang-btn {
+        padding: 3px 7px;
+        font-size: 11px;
+      }
+
+      /* 2-Column Mobile Grid for Booking Services */
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
+
+      .service-card {
+        padding: 12px 10px !important;
+        border-radius: 14px !important;
+        gap: 8px !important;
+      }
+
+      .clean-icon {
+        width: 32px !important;
+        height: 32px !important;
+      }
+
+      .clean-icon svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+
+      .service-title {
+        font-size: 13px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 2px !important;
+      }
+
+      .service-desc {
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+      }
+
+      .opd-card {
+        padding: 16px 14px !important;
+        border-radius: 16px !important;
+        gap: 12px !important;
+      }
+
+      .opd-title {
+        font-size: 14.5px !important;
+      }
+
+      .opd-text {
+        font-size: 12.5px !important;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .header-wrap {
+        padding: 0 8px;
+      }
+      .brand-name {
+        font-size: 13.5px;
+      }
+      .brand-seal {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+      }
+      .btn-call {
+        padding: 6px 10px;
+        font-size: 11.5px;
+      }
+      .btn-back {
+        padding: 6px 8px;
+        font-size: 11.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Clean Floating Header -->
+  <div class="header-wrap">
+    <header class="navbar" role="banner">
+      <div class="brand">
+        <div class="brand-seal" aria-hidden="true">FS</div>
+        <div>
+          <div class="brand-name">Dr. Favio Salinas G.</div>
+          <div class="brand-subtitle" data-i18n="brand_sub">Urological Surgeon · Nuevo Laredo</div>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
+        <a href="index.html" class="btn-back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          <span data-i18n="bk_nav_main">Main Site</span>
+        </a>
+        <a href="tel:8677144361" class="btn-call" data-i18n="bk_nav_call">Call (867) 714-4361</a>
+      </div>
+    </header>
+  </div>
+
+  <main class="container">
+    <!-- Intro -->
+    <div class="page-intro">
+      <h1 class="page-title" data-i18n="bk_title">Schedule your consultation</h1>
+      <p class="page-desc" data-i18n="bk_desc">
+        Select your care area, choose a date & time from the calendar, and confirm your visit.
+      </p>
+    </div>
+
+    <!-- Stepper Indicator -->
+    <div class="stepper" role="navigation" aria-label="Booking steps">
+      <div class="step-item active" data-step-target="1" id="step-nav-1">
+        <span class="step-num">1</span>
+        <span data-i18n="step_1">Service</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-item" data-step-target="2" id="step-nav-2">
+        <span class="step-num">2</span>
+        <span data-i18n="step_2">Date & Time</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-item" data-step-target="3" id="step-nav-3">
+        <span class="step-num">3</span>
+        <span data-i18n="step_3">Patient Info</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-item" data-step-target="4" id="step-nav-4">
+        <span class="step-num">4</span>
+        <span data-i18n="step_4">Confirmation</span>
+      </div>
+    </div>
+
+    <!-- ==================== STEP 1: SERVICE SELECTION ==================== -->
+    <section class="flow-step active" id="step-1">
+      <h2 class="step-heading" data-i18n="s1_heading">1. Select your consultation reason</h2>
+      <p class="step-sub" data-i18n="s1_sub">Select an area of care below, or choose General OPD Evaluation if you are uncertain.</p>
+
+      <!-- GENERAL OPD CARD (Clean, no emojis) -->
+      <div class="opd-card selected" id="card-opd" data-service-id="opd" data-service-title="General Urology OPD Consultation">
+        <div class="opd-badge" data-i18n="opd_badge">Recommended for New Patients</div>
+        <div class="clean-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+        <div class="opd-details">
+          <div class="opd-title-row">
+            <span class="opd-title" data-i18n="opd_title">Not sure? / General Urology OPD Consultation</span>
+            <div class="select-radio" aria-hidden="true"></div>
+          </div>
+          <p class="opd-text" data-i18n="opd_desc">
+            For general discomfort, routine checkups, initial urological evaluations, or if you are not sure which procedure is appropriate.
+          </p>
+          <div class="opd-extra-input">
+            <textarea id="opd-symptoms" class="clean-input" rows="2" placeholder="Briefly describe your symptoms or visit reason (optional)..." data-i18n-ph="opd_ph"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPECIALIZED SERVICE CARDS (Clean line SVG icons, no emojis) -->
+      <div class="services-grid">
+        <!-- HOLEP Laser -->
+        <div class="service-card" data-service-id="holep" data-service-title="HOLEP: Holmium Laser Prostate Enucleation">
+          <div class="service-top">
+            <div class="clean-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="select-radio" aria-hidden="true"></div>
+          </div>
+          <div>
+            <div class="service-title" data-i18n="srv_holep_title">HOLEP Laser Surgery</div>
+            <p class="service-desc" data-i18n="srv_holep_desc">Holmium laser treatment for benign prostatic hyperplasia (BPH) with rapid recovery and no incisions.</p>
+          </div>
+        </div>
+
+        <!-- Urinary Stones -->
+        <div class="service-card" data-service-id="stones" data-service-title="Kidney & Urinary Stones (Lithotripsy)">
+          <div class="service-top">
+            <div class="clean-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="select-radio" aria-hidden="true"></div>
+          </div>
+          <div>
+            <div class="service-title" data-i18n="srv_stones_title">Urinary Stones Care</div>
+            <p class="service-desc" data-i18n="srv_stones_desc">Relief and precision laser lithotripsy fragmentation for kidney and urinary tract stones.</p>
+          </div>
+        </div>
+
+        <!-- Women's Urology -->
+        <div class="service-card" data-service-id="women" data-service-title="Women’s Urological Health Consultation">
+          <div class="service-top">
+            <div class="clean-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="select-radio" aria-hidden="true"></div>
+          </div>
+          <div>
+            <div class="service-title" data-i18n="srv_women_title">Women's Urology</div>
+            <p class="service-desc" data-i18n="srv_women_desc">Clinical therapies for recurrent infections, bladder discomfort, overactivity, and stones.</p>
+          </div>
+        </div>
+
+        <!-- Pediatric Urology -->
+        <div class="service-card" data-service-id="pediatric" data-service-title="Pediatric Urology Consultation">
+          <div class="service-top">
+            <div class="clean-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="select-radio" aria-hidden="true"></div>
+          </div>
+          <div>
+            <div class="service-title" data-i18n="srv_ped_title">Pediatric Urology</div>
+            <p class="service-desc" data-i18n="srv_ped_desc">Attentive, gentle diagnosis and care for childhood kidney, bladder, and urinary patterns.</p>
+          </div>
+        </div>
+
+        <!-- Men's Health & Fertility -->
+        <div class="service-card" data-service-id="mens-health" data-service-title="Men’s Health, Fertility & ED">
+          <div class="service-top">
+            <div class="clean-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="select-radio" aria-hidden="true"></div>
+          </div>
+          <div>
+            <div class="service-title" data-i18n="srv_mens_title">Men's Health & Fertility</div>
+            <p class="service-desc" data-i18n="srv_mens_desc">Private diagnostic evaluations for erectile dysfunction, hormone balance, and male fertility.</p>
+          </div>
+        </div>
+
+        <!-- Oncology & Surgery -->
+        <div class="service-card" data-service-id="oncology" data-service-title="Urological Oncology & Robotic Surgery">
+          <div class="service-top">
+            <div class="clean-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="select-radio" aria-hidden="true"></div>
+          </div>
+          <div>
+            <div class="service-title" data-i18n="srv_onc_title">Oncology & Surgery</div>
+            <p class="service-desc" data-i18n="srv_onc_desc">Kidney, bladder, and prostate cancer screenings and minimally invasive laparoscopic surgery.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-actions">
+        <a href="index.html" class="btn btn-secondary" data-i18n="btn_back_overview">← Back to Overview</a>
+        <button type="button" class="btn btn-primary" id="btn-to-step-2" data-i18n="btn_to_cal">Continue to Calendar →</button>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 2: DATE & TIME ==================== -->
+    <section class="flow-step" id="step-2">
+      <h2 class="step-heading" data-i18n="s2_heading">2. Select appointment date & time</h2>
+      <p class="step-sub" data-i18n="s2_sub">Nuevo Laredo Clinic schedule (Monday to Saturday).</p>
+
+      <div class="datetime-container">
+        <!-- Calendar -->
+        <div class="clean-card">
+          <div class="calendar-header">
+            <h3 class="calendar-month-title" id="cal-month-title">October 2026</h3>
+            <div style="display: flex; gap: 6px;">
+              <button type="button" class="calendar-nav-btn" id="cal-prev" aria-label="Previous month">‹</button>
+              <button type="button" class="calendar-nav-btn" id="cal-next" aria-label="Next month">›</button>
+            </div>
+          </div>
+
+          <div class="calendar-grid" id="cal-grid">
+            <div class="cal-day-label">Mo</div>
+            <div class="cal-day-label">Tu</div>
+            <div class="cal-day-label">We</div>
+            <div class="cal-day-label">Th</div>
+            <div class="cal-day-label">Fr</div>
+            <div class="cal-day-label">Sa</div>
+            <div class="cal-day-label">Su</div>
+          </div>
+        </div>
+
+        <!-- Time Slots -->
+        <div class="clean-card">
+          <span class="slots-date-badge" id="selected-date-badge">Select a date</span>
+
+          <div class="slots-group-title" data-i18n="slots_morning">Morning</div>
+          <div class="slots-grid">
+            <button type="button" class="time-slot-btn" data-time="09:30 AM">09:30 AM</button>
+            <button type="button" class="time-slot-btn" data-time="10:15 AM">10:15 AM</button>
+            <button type="button" class="time-slot-btn" data-time="11:00 AM">11:00 AM</button>
+            <button type="button" class="time-slot-btn" data-time="11:45 AM">11:45 AM</button>
+          </div>
+
+          <div class="slots-group-title" data-i18n="slots_afternoon">Afternoon</div>
+          <div class="slots-grid">
+            <button type="button" class="time-slot-btn" data-time="04:00 PM">04:00 PM</button>
+            <button type="button" class="time-slot-btn" data-time="04:45 PM">04:45 PM</button>
+            <button type="button" class="time-slot-btn" data-time="05:30 PM">05:30 PM</button>
+            <button type="button" class="time-slot-btn" data-time="06:15 PM">06:15 PM</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-actions">
+        <button type="button" class="btn btn-secondary" id="btn-back-to-1" data-i18n="btn_back_serv">← Back to Services</button>
+        <button type="button" class="btn btn-primary" id="btn-to-step-3" disabled data-i18n="btn_to_patient">Continue to Patient Info →</button>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 3: PATIENT INFORMATION ==================== -->
+    <section class="flow-step" id="step-3">
+      <h2 class="step-heading" data-i18n="s3_heading">3. Patient details</h2>
+      <p class="step-sub" data-i18n="s3_sub">Enter your details to register your appointment.</p>
+
+      <div class="clean-card form-wrap">
+        <form class="form-grid" onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <label class="form-label" for="patient-name" data-i18n="lbl_name">Patient Full Name *</label>
+            <input type="text" id="patient-name" class="form-input" placeholder="e.g. Carlos Gomez" required>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="patient-phone" data-i18n="lbl_phone">Phone / WhatsApp Number *</label>
+              <input type="tel" id="patient-phone" class="form-input" placeholder="e.g. 867 123 4567" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="patient-email" data-i18n="lbl_email">Email (Optional)</label>
+              <input type="email" id="patient-email" class="form-input" placeholder="carlos@example.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_type">Consultation Type</label>
+            <div class="modality-options">
+              <div class="modality-pill selected" data-mode="In-Clinic Visit (Nuevo Laredo)">
+                <div class="select-radio" aria-hidden="true"></div>
+                <div>
+                  <strong data-i18n="type_inclinic">In-Clinic Visit</strong>
+                  <small data-i18n="type_inclinic_sub">Av. Benito Juarez 2713, Col. Juarez</small>
+                </div>
+              </div>
+              <div class="modality-pill" data-mode="Video Consultation">
+                <div class="select-radio" aria-hidden="true"></div>
+                <div>
+                  <strong data-i18n="type_video">Video Consultation</strong>
+                  <small data-i18n="type_video_sub">Private online consultation</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="patient-notes" data-i18n="lbl_notes">Notes or Past Medical History (Optional)</label>
+            <textarea id="patient-notes" class="clean-input" rows="3" placeholder="Briefly mention any past treatments or concerns..."></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="step-actions">
+        <button type="button" class="btn btn-secondary" id="btn-back-to-2" data-i18n="btn_back_dt">← Back to Date & Time</button>
+        <button type="button" class="btn btn-primary" id="btn-submit-booking" data-i18n="btn_review">Review & Confirm →</button>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 4: CONFIRMATION ==================== -->
+    <section class="flow-step" id="step-4">
+      <div class="clean-card ticket-wrap">
+        <div class="ticket-header">
+          <div>
+            <div style="font-size: 17px; font-weight: 600; color: var(--ink);">Dr. Favio Salinas G.</div>
+            <div style="font-size: 13px; color: var(--soft);">Urological Surgeon · Ced. Prof. 4967773 / 7308544</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 12px; color: var(--soft); text-transform: uppercase;" data-i18n="ref_label">Reference</div>
+            <div style="font-size: 18px; font-weight: 700; color: var(--teal);" id="confirm-ref">#FS-8921</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="ticket-row">
+            <span data-i18n="ticket_service">Service</span>
+            <span id="confirm-service">General Urology OPD Consultation</span>
+          </div>
+          <div class="ticket-row">
+            <span data-i18n="ticket_dt">Date & Time</span>
+            <span id="confirm-datetime">Thursday, Oct 22, 2026 · 10:15 AM</span>
+          </div>
+          <div class="ticket-row">
+            <span data-i18n="ticket_patient">Patient</span>
+            <span id="confirm-name">Carlos Gomez</span>
+          </div>
+          <div class="ticket-row">
+            <span data-i18n="ticket_contact">Contact</span>
+            <span id="confirm-phone">867 123 4567</span>
+          </div>
+          <div class="ticket-row">
+            <span data-i18n="ticket_type">Consultation Type</span>
+            <span id="confirm-mode">In-Clinic Visit (Nuevo Laredo)</span>
+          </div>
+          <div class="ticket-row" style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-subtle);">
+            <span data-i18n="ticket_loc">Location</span>
+            <span data-i18n="ticket_loc_val">Av. Benito Juarez 2713, Col. Juarez, Nuevo Laredo</span>
+          </div>
+        </div>
+
+        <div class="ticket-actions">
+          <a href="#" id="btn-whatsapp-confirm" class="btn btn-whatsapp" target="_blank" rel="noopener" data-i18n="btn_send_wa">
+            Send Confirmation via WhatsApp
+          </a>
+          <a href="tel:8677144361" class="btn btn-secondary" data-i18n="btn_call_clinic">
+            Call Clinic: (867) 714-4361
+          </a>
+          <a href="index.html" class="btn btn-secondary" style="border: none;" data-i18n="btn_return_home">
+            Return to Main Website
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function() {
+      // Bilingual Dictionary for Booking
+      const translations = {
+        en: {
+          brand_sub: "Urological Surgeon · Nuevo Laredo",
+          bk_nav_main: "Main Site",
+          bk_nav_call: "Call (867) 714-4361",
+          bk_title: "Schedule your consultation",
+          bk_desc: "Select your care area, choose a date & time from the calendar, and confirm your visit.",
+          step_1: "Service",
+          step_2: "Date & Time",
+          step_3: "Patient Info",
+          step_4: "Confirmation",
+          s1_heading: "1. Select your consultation reason",
+          s1_sub: "Select an area of care below, or choose General OPD Evaluation if you are uncertain.",
+          opd_badge: "Recommended for New Patients",
+          opd_title: "Not sure? / General Urology OPD Consultation",
+          opd_desc: "For general discomfort, routine checkups, initial urological evaluations, or if you are not sure which procedure is appropriate.",
+          opd_ph: "Briefly describe your symptoms or visit reason (optional)...",
+          srv_holep_title: "HOLEP Laser Surgery",
+          srv_holep_desc: "Holmium laser treatment for benign prostatic hyperplasia (BPH) with rapid recovery and no incisions.",
+          srv_stones_title: "Urinary Stones Care",
+          srv_stones_desc: "Relief and precision laser lithotripsy fragmentation for kidney and urinary tract stones.",
+          srv_women_title: "Women's Urology",
+          srv_women_desc: "Clinical therapies for recurrent infections, bladder discomfort, overactivity, and stones.",
+          srv_ped_title: "Pediatric Urology",
+          srv_ped_desc: "Attentive, gentle diagnosis and care for childhood kidney, bladder, and urinary patterns.",
+          srv_mens_title: "Men's Health & Fertility",
+          srv_mens_desc: "Private diagnostic evaluations for erectile dysfunction, hormone balance, and male fertility.",
+          srv_onc_title: "Oncology & Surgery",
+          srv_onc_desc: "Kidney, bladder, and prostate cancer screenings and minimally invasive laparoscopic surgery.",
+          btn_to_cal: "Continue to Calendar →",
+          btn_back_overview: "← Back to Overview",
+          s2_heading: "2. Select appointment date & time",
+          s2_sub: "Nuevo Laredo Clinic schedule (Monday to Saturday).",
+          slots_morning: "Morning",
+          slots_afternoon: "Afternoon",
+          btn_back_serv: "← Back to Services",
+          btn_to_patient: "Continue to Patient Info →",
+          s3_heading: "3. Patient details",
+          s3_sub: "Enter your details to register your appointment.",
+          lbl_name: "Patient Full Name *",
+          lbl_phone: "Phone / WhatsApp Number *",
+          lbl_email: "Email (Optional)",
+          lbl_type: "Consultation Type",
+          type_inclinic: "In-Clinic Visit",
+          type_inclinic_sub: "Av. Benito Juarez 2713, Col. Juarez",
+          type_video: "Video Consultation",
+          type_video_sub: "Private online consultation",
+          lbl_notes: "Notes or Past Medical History (Optional)",
+          btn_back_dt: "← Back to Date & Time",
+          btn_review: "Review & Confirm →",
+          ref_label: "Reference",
+          ticket_service: "Service",
+          ticket_dt: "Date & Time",
+          ticket_patient: "Patient",
+          ticket_contact: "Contact",
+          ticket_type: "Consultation Type",
+          ticket_loc: "Location",
+          ticket_loc_val: "Av. Benito Juarez 2713, Col. Juarez, Nuevo Laredo",
+          btn_send_wa: "Send Confirmation via WhatsApp",
+          btn_call_clinic: "Call Clinic: (867) 714-4361",
+          btn_return_home: "Return to Main Website"
+        },
+        es: {
+          brand_sub: "Cirujano Urólogo · Nuevo Laredo",
+          bk_nav_main: "Sitio Principal",
+          bk_nav_call: "Llamar (867) 714-4361",
+          bk_title: "Agende su consulta",
+          bk_desc: "Seleccione su área de atención, elija fecha y horario en el calendario y confirme su visita.",
+          step_1: "Servicio",
+          step_2: "Fecha y Hora",
+          step_3: "Datos del Paciente",
+          step_4: "Confirmación",
+          s1_heading: "1. Seleccione el motivo de su consulta",
+          s1_sub: "Elija un área de atención o seleccione Consulta General OPD si no está seguro.",
+          opd_badge: "Recomendado para Primera Consulta",
+          opd_title: "No está seguro? / Consulta Urológica General OPD",
+          opd_desc: "Para molestias generales, revisión de rutina, valoración urológica inicial o si no está seguro de cuál procedimiento es el adecuado.",
+          opd_ph: "Describa brevemente sus síntomas o motivo de consulta (opcional)...",
+          srv_holep_title: "Cirugía Láser HOLEP",
+          srv_holep_desc: "Tratamiento láser Holmio para hiperplasia prostática benigna (HPB) con rápida recuperación y sin incisiones.",
+          srv_stones_title: "Cálculos Urinarios",
+          srv_stones_desc: "Alivio y litotricia láser de precisión para cálculos renales y del tracto urinario.",
+          srv_women_title: "Urología Femenina",
+          srv_women_desc: "Terapias clínicas para infecciones recurrentes, molestias en la vejiga, incontinencia y piedras.",
+          srv_ped_title: "Urología Pediátrica",
+          srv_ped_desc: "Atención cuidadosa y cálida para riñón, vejiga y patrones urinarios en niños.",
+          srv_mens_title: "Salud Masculina y Fertilidad",
+          srv_mens_desc: "Evaluaciones privadas para disfunción eréctil, equilibrio hormonal y fertilidad masculina.",
+          srv_onc_title: "Oncología y Cirugía",
+          srv_onc_desc: "Detección oportuna de cáncer de próstata, riñón y vejiga, y cirugía laparoscópica de mínima invasión.",
+          btn_to_cal: "Continuar al Calendario →",
+          btn_back_overview: "← Volver al Sitio",
+          s2_heading: "2. Seleccione fecha y hora",
+          s2_sub: "Horario de consulta en Nuevo Laredo (Lunes a Sábado).",
+          slots_morning: "Mañana",
+          slots_afternoon: "Tarde",
+          btn_back_serv: "← Volver a Servicios",
+          btn_to_patient: "Continuar a Datos del Paciente →",
+          s3_heading: "3. Datos del paciente",
+          s3_sub: "Ingrese sus datos para registrar su cita médica.",
+          lbl_name: "Nombre Completo del Paciente *",
+          lbl_phone: "Teléfono / WhatsApp *",
+          lbl_email: "Correo Electrónico (Opcional)",
+          lbl_type: "Tipo de Consulta",
+          type_inclinic: "Consulta Presencial",
+          type_inclinic_sub: "Av. Benito Juárez 2713, Col. Juárez",
+          type_video: "Videoconsulta",
+          type_video_sub: "Consulta privada en línea",
+          lbl_notes: "Notas o Antecedentes Médicos (Opcional)",
+          btn_back_dt: "← Volver a Fecha y Hora",
+          btn_review: "Revisar y Confirmar →",
+          ref_label: "Referencia",
+          ticket_service: "Servicio",
+          ticket_dt: "Fecha y Hora",
+          ticket_patient: "Paciente",
+          ticket_contact: "Contacto",
+          ticket_type: "Tipo de Consulta",
+          ticket_loc: "Ubicación",
+          ticket_loc_val: "Av. Benito Juárez 2713, Col. Juárez, Nuevo Laredo",
+          btn_send_wa: "Enviar Confirmación por WhatsApp",
+          btn_call_clinic: "Llamar al Consultorio: (867) 714-4361",
+          btn_return_home: "Volver al Sitio Principal"
+        }
+      };
+
+      let currentLang = 'en';
+
+      function setLanguage(lang) {
+        if (!translations[lang]) return;
+        currentLang = lang;
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+          }
+        });
+
+        document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+          const key = el.getAttribute('data-i18n-ph');
+          if (translations[lang][key]) {
+            el.setAttribute('placeholder', translations[lang][key]);
+          }
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+
+        try {
+          localStorage.setItem('dr_favio_lang', lang);
+        } catch (e) {}
+      }
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          setLanguage(btn.getAttribute('data-lang'));
+        });
+      });
+
+      const initialLang = localStorage.getItem('dr_favio_lang') || 'es';
+      setLanguage(initialLang);
+
+      const bookingData = {
+        serviceId: 'opd',
+        serviceTitle: 'General Urology OPD Consultation',
+        symptoms: '',
+        date: null,
+        dateFormatted: '',
+        time: null,
+        patientName: '',
+        patientPhone: '',
+        patientEmail: '',
+        mode: 'In-Clinic Visit (Nuevo Laredo)',
+        notes: '',
+        refCode: ''
+      };
+
+      let currentStep = 1;
+
+      function showStep(stepNum) {
+        currentStep = stepNum;
+        document.querySelectorAll('.flow-step').forEach(step => step.classList.remove('active'));
+        const active = document.getElementById(`step-${stepNum}`);
+        if (active) active.classList.add('active');
+
+        for (let i = 1; i <= 4; i++) {
+          const nav = document.getElementById(`step-nav-${i}`);
+          if (!nav) continue;
+          nav.classList.remove('active', 'completed');
+          if (i === stepNum) nav.classList.add('active');
+          else if (i < stepNum) nav.classList.add('completed');
+        }
+
+        window.scrollTo({ top: 100, behavior: 'smooth' });
+      }
+
+      function selectService(card) {
+        document.querySelectorAll('.service-card, .opd-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        bookingData.serviceId = card.getAttribute('data-service-id');
+        bookingData.serviceTitle = card.getAttribute('data-service-title');
+      }
+
+      document.querySelectorAll('.service-card, .opd-card').forEach(card => {
+        card.addEventListener('click', () => selectService(card));
+      });
+
+      // Calendar
+      let currentCalDate = new Date();
+      let selectedCalDate = null;
+
+      function renderCalendar() {
+        const calGrid = document.getElementById('cal-grid');
+        const monthTitle = document.getElementById('cal-month-title');
+        
+        const year = currentCalDate.getFullYear();
+        const month = currentCalDate.getMonth();
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        monthTitle.textContent = `${monthNames[month]} ${year}`;
+
+        while (calGrid.children.length > 7) {
+          calGrid.removeChild(calGrid.lastChild);
+        }
+
+        const firstDayOfMonth = new Date(year, month, 1);
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        let startingDayIndex = firstDayOfMonth.getDay() - 1;
+        if (startingDayIndex === -1) startingDayIndex = 6;
+
+        for (let i = 0; i < startingDayIndex; i++) {
+          calGrid.appendChild(document.createElement('div'));
+        }
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        for (let d = 1; d <= daysInMonth; d++) {
+          const cell = document.createElement('div');
+          cell.className = 'cal-day-cell';
+          cell.textContent = d;
+
+          const dateObj = new Date(year, month, d);
+          dateObj.setHours(0, 0, 0, 0);
+
+          if (dateObj.getDay() === 0 || dateObj < today) {
+            cell.classList.add('disabled');
+          } else {
+            if (selectedCalDate && dateObj.getTime() === selectedCalDate.getTime()) {
+              cell.classList.add('selected');
+            }
+
+            cell.addEventListener('click', () => {
+              document.querySelectorAll('.cal-day-cell').forEach(c => c.classList.remove('selected'));
+              cell.classList.add('selected');
+              selectedCalDate = dateObj;
+              
+              const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+              bookingData.date = dateObj;
+              bookingData.dateFormatted = dateObj.toLocaleDateString('en-US', options);
+              
+              document.getElementById('selected-date-badge').textContent = `Date: ${bookingData.dateFormatted}`;
+              checkDateTimeReady();
+            });
+          }
+          calGrid.appendChild(cell);
+        }
+
+        if (!selectedCalDate) {
+          const firstAvailable = calGrid.querySelector('.cal-day-cell:not(.disabled)');
+          if (firstAvailable) firstAvailable.click();
+        }
+      }
+
+      document.getElementById('cal-prev').addEventListener('click', () => {
+        currentCalDate.setMonth(currentCalDate.getMonth() - 1);
+        renderCalendar();
+      });
+
+      document.getElementById('cal-next').addEventListener('click', () => {
+        currentCalDate.setMonth(currentCalDate.getMonth() + 1);
+        renderCalendar();
+      });
+
+      // Time slots
+      document.querySelectorAll('.time-slot-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.time-slot-btn').forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          bookingData.time = btn.getAttribute('data-time');
+          checkDateTimeReady();
+        });
+      });
+
+      function checkDateTimeReady() {
+        const nextBtn = document.getElementById('btn-to-step-3');
+        nextBtn.disabled = !(bookingData.date && bookingData.time);
+      }
+
+      // Modality pills
+      document.querySelectorAll('.modality-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          document.querySelectorAll('.modality-pill').forEach(p => p.classList.remove('selected'));
+          pill.classList.add('selected');
+          bookingData.mode = pill.getAttribute('data-mode');
+        });
+      });
+
+      // Step navigations
+      document.getElementById('btn-to-step-2').addEventListener('click', () => {
+        const symptomsInput = document.getElementById('opd-symptoms');
+        if (symptomsInput && symptomsInput.value.trim()) {
+          bookingData.symptoms = symptomsInput.value.trim();
+        }
+        showStep(2);
+      });
+
+      document.getElementById('btn-back-to-1').addEventListener('click', () => showStep(1));
+      document.getElementById('btn-to-step-3').addEventListener('click', () => showStep(3));
+      document.getElementById('btn-back-to-2').addEventListener('click', () => showStep(2));
+
+      // Submission
+      document.getElementById('btn-submit-booking').addEventListener('click', () => {
+        const nameInput = document.getElementById('patient-name');
+        const phoneInput = document.getElementById('patient-phone');
+        const emailInput = document.getElementById('patient-email');
+        const notesInput = document.getElementById('patient-notes');
+
+        if (!nameInput.value.trim()) {
+          nameInput.focus();
+          return;
+        }
+        if (!phoneInput.value.trim()) {
+          phoneInput.focus();
+          return;
+        }
+
+        bookingData.patientName = nameInput.value.trim();
+        bookingData.patientPhone = phoneInput.value.trim();
+        bookingData.patientEmail = emailInput.value.trim();
+        bookingData.notes = notesInput.value.trim();
+
+        bookingData.refCode = `#FS-${Math.floor(1000 + Math.random() * 9000)}`;
+
+        document.getElementById('confirm-ref').textContent = bookingData.refCode;
+        document.getElementById('confirm-service').textContent = bookingData.serviceTitle;
+        document.getElementById('confirm-datetime').textContent = `${bookingData.dateFormatted} · ${bookingData.time}`;
+        document.getElementById('confirm-name').textContent = bookingData.patientName;
+        document.getElementById('confirm-phone').textContent = bookingData.patientPhone;
+        document.getElementById('confirm-mode').textContent = bookingData.mode;
+
+        const message = `Hello Dr. Favio Salinas G., I would like to confirm my consultation:\n\n` +
+          `• Ref: ${bookingData.refCode}\n` +
+          `• Service: ${bookingData.serviceTitle}\n` +
+          `• Date & Time: ${bookingData.dateFormatted} at ${bookingData.time}\n` +
+          `• Patient: ${bookingData.patientName}\n` +
+          `• Phone: ${bookingData.patientPhone}\n` +
+          `• Type: ${bookingData.mode}` +
+          (bookingData.symptoms ? `\n• Symptoms: ${bookingData.symptoms}` : '') +
+          (bookingData.notes ? `\n• Notes: ${bookingData.notes}` : '');
+
+        const waUrl = `https://api.whatsapp.com/send?phone=+528677415761&text=${encodeURIComponent(message)}`;
+        document.getElementById('btn-whatsapp-confirm').setAttribute('href', waUrl);
+
+        showStep(4);
+      });
+
+      document.querySelectorAll('.step-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const target = parseInt(item.getAttribute('data-step-target'), 10);
+          if (target < currentStep) showStep(target);
+        });
+      });
+
+      renderCalendar();
+
+      // Check query parameter
+      const params = new URLSearchParams(window.location.search);
+      const req = params.get('service');
+      if (req) {
+        const m = document.querySelector(`[data-service-id="${req}"]`);
+        if (m) selectService(m);
+      }
+    })();
+  </script>
+</body>
+</html>
+
+        const message = `Hello Dr. Favio Salinas G., I would like to confirm my consultation:\n\n` +
+          `• Ref: ${bookingData.refCode}\n` +
+          `• Service: ${bookingData.serviceTitle}\n` +
+          `• Date & Time: ${bookingData.dateFormatted} at ${bookingData.time}\n` +
+          `• Patient: ${bookingData.patientName}\n` +
+          `• Phone: ${bookingData.patientPhone}\n` +
+          `• Type: ${bookingData.mode}` +
+          (bookingData.symptoms ? `\n• Symptoms: ${bookingData.symptoms}` : '') +
+          (bookingData.notes ? `\n• Notes: ${bookingData.notes}` : '');
+
+        const waUrl = `https://api.whatsapp.com/send?phone=+528677415761&text=${encodeURIComponent(message)}`;
+        document.getElementById('btn-whatsapp-confirm').setAttribute('href', waUrl);
+
+        showStep(4);
+      });
+
+      document.querySelectorAll('.step-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const target = parseInt(item.getAttribute('data-step-target'), 10);
+          if (target < currentStep) showStep(target);
+        });
+      });
+
+      renderCalendar();
+
+      // Check query parameter
+      const params = new URLSearchParams(window.location.search);
+      const req = params.get('service');
+      if (req) {
+        const m = document.querySelector(`[data-service-id="${req}"]`);
+        if (m) selectService(m);
+      }
+    })();
+  </script>
+</body>
+</html>

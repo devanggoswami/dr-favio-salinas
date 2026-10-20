@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dr. Favio Salinas G. · Urological Surgeon · Nuevo Laredo, Tamps.</title>
+  <meta name="description" content="Personalized, high-quality urological care for men, women and kids. Certified urologist surgeon in Nuevo Laredo, Tamps. specializing in HOLEP, laparoscopic, and robotic surgery.">
+
+  <!-- Google Fonts: Fraunces (400, 600) & Plus Jakarta Sans (400, 500, 600) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables */
+    :root {
+      --pearl: #F7FBFA;
+      --mist: #E3F4F1;
+      --sea: #BFE6E0;
+      --peach: #FFD9C7;
+      --lilac: #E6E0FA;
+      --teal: #1E8C8C;
+      --teal-d: #176F73;
+      --ink: #2E4A57;
+      --soft: #5E7B86;
+      --white: #FFFFFF;
+      --shadow-teal: 0 16px 36px -10px rgba(30, 140, 140, 0.22);
+      --shadow-soft: 0 10px 28px -8px rgba(46, 74, 87, 0.08);
+      --font-heading: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+      background-color: var(--pearl);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      background-color: var(--pearl);
+      color: var(--ink);
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    p {
+      color: var(--soft);
+      overflow-wrap: break-word;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Accessible focus */
+    :focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+
+    /* Layout Container */
+    .container {
+      width: 100%;
+      max-width: 1070px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    /* Grid min-width fix so children shrink properly on mobile */
+    .hero-grid > *,
+    .who-grid > *,
+    .holep-card > *,
+    .contact-grid > * {
+      min-width: 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 9999px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-teal {
+      background-color: var(--teal);
+      color: var(--white);
+      box-shadow: var(--shadow-teal);
+    }
+
+    .btn-teal:hover {
+      background-color: var(--teal-d);
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px -8px rgba(30, 140, 140, 0.32);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background-color: var(--white);
+      color: var(--ink);
+      border-color: var(--sea);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      transform: translateY(-2px);
+      background-color: var(--white);
+    }
+
+    .btn-white {
+      background-color: var(--white);
+      color: var(--ink);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-white:hover {
+      color: var(--teal);
+      transform: translateY(-2px);
+    }
+
+    /* 3D Touch Interactions & Tactile Depth */
+    .btn {
+      position: relative;
+      transform: translateZ(0);
+      user-select: none;
+    }
+
+    .btn:active {
+      transform: translateY(2px) scale(0.97) !important;
+      box-shadow: 0 4px 12px -2px rgba(30, 140, 140, 0.25) !important;
+    }
+
+    .tilt-card {
+      position: relative;
+      transform-style: preserve-3d;
+      will-change: transform;
+      transition: transform 0.18s cubic-bezier(0.2, 0, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+      overflow: hidden;
+    }
+
+    .tilt-glare {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: radial-gradient(circle 280px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.65), transparent 75%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 5;
+    }
+
+    .tilt-card:hover .tilt-glare {
+      opacity: 1;
+    }
+
+    /* 1. Floating Sticky Glass Pill Navbar */
+    .header-wrap {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      padding: 0 16px;
+      width: 100%;
+    }
+
+    .navbar {
+      max-width: 1070px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 9999px;
+      box-shadow: 0 12px 32px -8px rgba(46, 74, 87, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px 10px 24px;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--ink);
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    .brand-title {
+      font-size: 13px;
+      color: var(--soft);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--teal);
+    }
+
+    .nav-btn {
+      padding: 10px 22px;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* Language Toggle Switch */
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      background: var(--mist);
+      border: 1px solid var(--sea);
+      padding: 3px;
+      border-radius: 9999px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+
+    .lang-btn {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--soft);
+      background: transparent;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-btn:hover {
+      color: var(--teal);
+    }
+
+    .lang-btn.active {
+      background: var(--white);
+      color: var(--teal-d);
+      box-shadow: 0 2px 8px rgba(46, 74, 87, 0.12);
+    }
+
+    /* 2. Hero Section */
+    .hero-section {
+      position: relative;
+      padding-top: 60px;
+      padding-bottom: 96px;
+      overflow: hidden;
+      contain: paint;
+      max-width: 100vw;
+    }
+
+    /* Hero Background Drifting Blobs */
+    .hero-blobs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+      contain: strict;
+      clip-path: inset(0);
+      max-width: 100%;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.65;
+      animation: blobDrift 18s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+
+    .blob-sea {
+      width: 440px;
+      height: 440px;
+      background: var(--sea);
+      top: -80px;
+      left: -120px;
+      animation-duration: 20s;
+    }
+
+    .blob-peach {
+      width: 420px;
+      height: 420px;
+      background: var(--peach);
+      top: 60px;
+      right: -80px;
+      animation-duration: 18s;
+      animation-delay: -4s;
+    }
+
+    .blob-lilac {
+      width: 380px;
+      height: 380px;
+      background: var(--lilac);
+      bottom: -100px;
+      left: 30%;
+      animation-duration: 22s;
+      animation-delay: -8s;
+    }
+
+    @keyframes blobDrift {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(35px, -30px, 0) scale(1.08);
+      }
+      100% {
+        transform: translate3d(-30px, 25px, 0) scale(0.94);
+      }
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 4.8vw, 54px);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .accent-calm {
+      font-style: italic;
+      color: var(--teal);
+      font-weight: 400;
+    }
+
+    .hero-lead {
+      font-size: 19px;
+      line-height: 1.6;
+      color: var(--soft);
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 8px;
+    }
+
+    /* Hero Floating Glass Profile Card */
+    .hero-card-wrap {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .hero-glass-card {
+      width: 100%;
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 36px;
+      box-shadow: 0 20px 48px -12px rgba(30, 140, 140, 0.18), 0 8px 24px -4px rgba(46, 74, 87, 0.06);
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: cardFloat 7s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    @keyframes cardFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .card-seal {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--peach) 0%, var(--mist) 50%, var(--lilac) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--teal-d);
+      box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.8), 0 8px 20px -4px rgba(30, 140, 140, 0.16);
+      margin-bottom: 20px;
+    }
+
+    .card-name {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .card-subtitle {
+      font-size: 14px;
+      color: var(--soft);
+      line-height: 1.45;
+      margin-bottom: 22px;
+      max-width: 280px;
+    }
+
+    .pills-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .mist-pill {
+      background: var(--mist);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .card-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(191, 230, 224, 0.5);
+      margin-bottom: 18px;
+    }
+
+    .card-cert {
+      font-size: 13px;
+      color: var(--teal-d);
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    /* 3. Who We Are */
+    .who-section {
+      background: linear-gradient(180deg, var(--pearl) 0%, var(--mist) 100%);
+      padding: 100px 0;
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .who-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 3.8vw, 42px);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--soft);
+      margin-top: 8px;
+    }
+
+    .who-copy p {
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--ink);
+    }
+
+    .who-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .stack-card {
+      border-radius: 28px;
+      padding: 28px 32px;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.25s ease;
+    }
+
+    .stack-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card-white {
+      background-color: var(--white);
+    }
+
+    .card-peach {
+      background-color: var(--peach);
+    }
+
+    .card-lilac {
+      background-color: var(--lilac);
+    }
+
+    .stack-card-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .stack-card p {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    /* 4. Services Section */
+    .services-section {
+      padding: 104px 0;
+      background: var(--pearl);
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    /* Segmented Tab Controls */
+    .tab-list {
+      display: inline-flex;
+      background: var(--mist);
+      padding: 6px;
+      border-radius: 9999px;
+      gap: 6px;
+      margin-bottom: 48px;
+      max-width: 100%;
+    }
+
+    .tab-trigger {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 10px 28px;
+      border-radius: 9999px;
+      border: none;
+      background: transparent;
+      color: var(--soft);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .tab-trigger[aria-selected="true"] {
+      background: var(--white);
+      color: var(--ink);
+      box-shadow: 0 4px 16px rgba(46, 74, 87, 0.08);
+    }
+
+    .tab-trigger:hover:not([aria-selected="true"]) {
+      color: var(--teal);
+    }
+
+    .tab-panel {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      animation: tabFadeUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .tab-panel.active {
+      display: grid;
+    }
+
+    @keyframes tabFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1.5px solid var(--sea);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 8px 24px -6px rgba(46, 74, 87, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--teal);
+      box-shadow: 0 16px 32px -8px rgba(30, 140, 140, 0.16);
+    }
+
+    .service-icon-tile {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: var(--mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .service-card-title {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--soft);
+    }
+
+    /* 5. HOLEP Feature Band */
+    .holep-section {
+      padding: 40px 0 96px;
+      background: var(--pearl);
+    }
+
+    .holep-card {
+      background: linear-gradient(135deg, var(--sea) 0%, #D4EEF2 50%, var(--lilac) 100%);
+      border-radius: 44px;
+      padding: 56px 48px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+      box-shadow: var(--shadow-teal);
+    }
+
+    .holep-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .holep-title {
+      font-size: clamp(26px, 3.4vw, 38px);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .holep-content p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--ink);
+      max-width: 500px;
+    }
+
+    .holep-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .check-item {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      box-shadow: 0 6px 18px rgba(46, 74, 87, 0.05);
+    }
+
+    .check-dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    /* 6. Conditions We Treat */
+    .conditions-section {
+      padding: 96px 0;
+      background: var(--pearl);
+    }
+
+    .conditions-header {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+
+    .chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .chip {
+      background: var(--white);
+      border: 1.5px solid var(--sea);
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      box-shadow: 0 4px 12px rgba(46, 74, 87, 0.04);
+      transition: all 0.22s ease;
+      cursor: default;
+    }
+
+    .chip-peach {
+      background: var(--peach);
+      border-color: rgba(255, 180, 150, 0.45);
+    }
+
+    .chip:hover {
+      background: var(--teal) !important;
+      color: var(--white) !important;
+      border-color: var(--teal) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -4px rgba(30, 140, 140, 0.25);
+    }
+
+    /* 7. Contact Section */
+    .contact-section {
+      background: var(--mist);
+      padding: 104px 0;
+    }
+
+    .contact-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    .contact-info-card {
+      background: var(--white);
+      border-radius: 32px;
+      border: 1px solid var(--sea);
+      padding: 44px 36px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .contact-icon-tile {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: var(--mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .contact-row-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .contact-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--soft);
+    }
+
+    .contact-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    .contact-value:hover {
+      color: var(--teal);
+    }
+
+    .contact-action-card {
+      background: linear-gradient(135deg, var(--peach) 0%, var(--lilac) 100%);
+      border-radius: 32px;
+      padding: 44px 36px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .action-card-top h3 {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .action-card-top p {
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .social-pills-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(46, 74, 87, 0.12);
+    }
+
+    .social-pills-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--soft);
+    }
+
+    .social-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .social-pill {
+      background: var(--white);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 9999px;
+      box-shadow: 0 2px 8px rgba(46, 74, 87, 0.06);
+    }
+
+    .social-pill:hover {
+      background: var(--teal);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* 8. Footer */
+    .site-footer {
+      background: var(--pearl);
+      padding: 36px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(191, 230, 224, 0.4);
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: var(--soft);
+      line-height: 1.6;
+    }
+
+    /* Responsive Breakpoints */
+    @media (min-width: 861px) {
+      .stack-card.card-peach {
+        transform: translateX(36px);
+      }
+      .stack-card.card-peach:hover {
+        transform: translate(36px, -3px);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .navbar nav {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .header-wrap {
+        padding: 0 8px;
+      }
+
+      .navbar {
+        padding: 8px 12px;
+        gap: 8px;
+      }
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .brand-title {
+        font-size: 11.5px;
+      }
+
+      .nav-btn {
+        padding: 7px 14px;
+        font-size: 13px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .hero-content {
+        text-align: center;
+        align-items: center;
+      }
+
+      .hero-title {
+        font-size: clamp(26px, 6.5vw, 38px);
+        line-height: 1.2;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .who-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .holep-card {
+        grid-template-columns: 1fr;
+        padding: 32px 20px;
+        gap: 24px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info-card,
+      .contact-action-card {
+        padding: 28px 18px;
+      }
+    }
+
+    /* 2-Column Mobile Grid for Services (Fixes long 1-by-1 scrolling) */
+    @media (max-width: 768px) {
+      .tab-panel {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
+
+      .service-card {
+        padding: 14px 10px !important;
+        border-radius: 16px !important;
+        gap: 8px !important;
+        min-width: 0 !important;
+        box-shadow: 0 4px 12px -2px rgba(46, 74, 87, 0.04) !important;
+      }
+
+      .service-icon-tile {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 10px !important;
+        font-size: 16px !important;
+      }
+
+      .service-card-title {
+        font-size: 13px !important;
+        line-height: 1.25 !important;
+      }
+
+      .service-card p {
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+      }
+
+      .who-cards {
+        gap: 10px !important;
+      }
+
+      .stack-card {
+        padding: 16px 18px !important;
+        border-radius: 18px !important;
+        transform: none !important;
+      }
+
+      .stack-card.card-peach {
+        transform: none !important;
+      }
+
+      .stack-card-title {
+        font-size: 15px !important;
+        margin-bottom: 4px !important;
+      }
+
+      .stack-card p {
+        font-size: 12.5px !important;
+        line-height: 1.4 !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .header-wrap {
+        padding: 0 6px;
+      }
+
+      .navbar {
+        padding: 6px 10px;
+        gap: 6px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .brand-title {
+        display: none;
+      }
+
+      .nav-btn-call {
+        display: none !important; /* Hide redundant call button from top navbar on mobile */
+      }
+
+      .nav-btn {
+        padding: 6px 11px;
+        font-size: 12px;
+      }
+
+      .lang-btn {
+        padding: 3px 6px;
+        font-size: 10.5px;
+      }
+
+      .hero-section {
+        padding-top: 28px;
+        padding-bottom: 48px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 14.5px;
+      }
+
+      .hero-glass-card {
+        padding: 22px 14px !important;
+        border-radius: 22px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .card-name {
+        font-size: 20px !important;
+      }
+
+      .card-subtitle {
+        font-size: 12.5px !important;
+      }
+
+      .pills-group {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 6px !important;
+      }
+
+      .mist-pill {
+        font-size: 10.5px !important;
+        padding: 4px 8px !important;
+      }
+
+      .tab-list {
+        width: 100%;
+        justify-content: center;
+        padding: 4px;
+      }
+
+      .tab-trigger {
+        padding: 7px 14px;
+        font-size: 13px;
+      }
+
+      .holep-card {
+        border-radius: 26px;
+        padding: 26px 16px;
+        gap: 18px;
+      }
+
+      .holep-title {
+        font-size: 22px !important;
+      }
+
+      .holep-content p {
+        font-size: 14.5px !important;
+      }
+
+      .check-item {
+        padding: 12px 14px;
+        font-size: 13.5px;
+        border-radius: 14px;
+      }
+
+      .holep-content .btn {
+        width: 100%;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .action-buttons .btn {
+        width: 100%;
+      }
+
+      .contact-info-card,
+      .contact-action-card {
+        border-radius: 22px;
+        padding: 24px 16px;
+      }
+
+      .chip {
+        padding: 8px 14px;
+        font-size: 12.5px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .tab-panel {
+        gap: 6px !important;
+      }
+
+      .service-card {
+        padding: 10px 8px !important;
+      }
+
+      .service-card-title {
+        font-size: 12px !important;
+      }
+
+      .service-card p {
+        font-size: 10.5px !important;
+      }
+    }
+
+    /* Motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Floating Sticky Glass Pill Navbar -->
+  <div class="header-wrap">
+    <header class="navbar" role="banner">
+      <a href="#home" class="brand" aria-label="Dr. Favio Salinas G., Urological Surgeon">
+        <span class="brand-name">Dr. Favio Salinas G.</span>
+        <span class="brand-title" data-i18n="brand_title">Urological Surgeon</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">About us</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="lang-switch" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
+        <a href="tel:8677144361" class="btn btn-outline nav-btn nav-btn-call" style="padding: 9px 16px; font-size: 13.5px;" data-i18n="nav_call">Call</a>
+        <a href="booking.html" class="btn btn-teal nav-btn" data-i18n="nav_schedule">Schedule visit</a>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- 2. Hero Section -->
+    <section id="home" class="hero-section" aria-label="Welcome">
+      <div class="hero-blobs" aria-hidden="true">
+        <div class="blob blob-sea"></div>
+        <div class="blob blob-peach"></div>
+        <div class="blob blob-lilac"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <!-- Left Column -->
+        <div class="hero-content">
+          <h1 class="hero-title" data-i18n="hero_title">
+            Urology care that feels <span class="accent-calm">calm</span>, personal and precise.
+          </h1>
+          <p class="hero-lead" data-i18n="hero_lead">
+            Treatment and prevention of urological diseases for men, women and kids, from a certified surgeon in Nuevo Laredo, Tamps.
+          </p>
+          <div class="hero-actions">
+            <a href="booking.html" class="btn btn-teal" data-i18n="hero_schedule">Schedule your appointment</a>
+            <a href="#services" class="btn btn-outline" data-i18n="hero_services">See services</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Floating Profile Card with 3D Touch -->
+        <div class="hero-card-wrap">
+          <div class="hero-glass-card tilt-card">
+            <div class="tilt-glare"></div>
+            <div class="card-seal" aria-hidden="true">FS</div>
+            <h2 class="card-name">Dr. Favio Salinas G.</h2>
+            <p class="card-subtitle" data-i18n="hero_card_sub">Urological Surgeon · Laparoscopic and robotic surgery</p>
+            <div class="pills-group" aria-label="Professional medical licenses">
+              <span class="mist-pill">Ced. Prof. 4967773</span>
+              <span class="mist-pill">Ced. Prof. 7308544</span>
+              <span class="mist-pill">Ced. Prof. 09610780</span>
+            </div>
+            <div class="card-divider" aria-hidden="true"></div>
+            <p class="card-cert" data-i18n="hero_card_cert">Certified by the Mexican National Council of Urology AC.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Who We Are Section -->
+    <section id="about" class="who-section" aria-labelledby="who-heading">
+      <div class="container who-grid">
+        <!-- Left Column -->
+        <div class="who-copy">
+          <h2 id="who-heading" class="section-title" data-i18n="who_title">Who we are</h2>
+          <p data-i18n="who_p1">
+            Our mission is to provide a personalized service with high quality care to cover all your needs in the treatment and prevention of urological diseases.
+          </p>
+          <p data-i18n="who_p2">
+            Dr. Favio Salinas G. is a dedicated and experienced urologist surgeon in Nuevo Laredo, Tamps., who works closely with his patients to maintain and improve their health.
+          </p>
+        </div>
+
+        <!-- Right Column: 3 Stacked Cards with 3D Touch -->
+        <div class="who-cards">
+          <div class="stack-card card-white tilt-card">
+            <div class="tilt-glare"></div>
+            <h3 class="stack-card-title" data-i18n="who_c1_title">Personalized care</h3>
+            <p data-i18n="who_c1_text">Attentive clinical service shaped around each patient’s unique health requirements and peace of mind.</p>
+          </div>
+
+          <div class="stack-card card-peach tilt-card">
+            <div class="tilt-glare"></div>
+            <h3 class="stack-card-title" data-i18n="who_c2_title">Comprehensive services</h3>
+            <p data-i18n="who_c2_text">We believe in providing comprehensive care services to our patients in a pleasant and relaxed environment.</p>
+          </div>
+
+          <div class="stack-card card-lilac tilt-card">
+            <div class="tilt-glare"></div>
+            <h3 class="stack-card-title" data-i18n="who_c3_title">Certified surgeon</h3>
+            <p data-i18n="who_c3_text">Rigorous surgical experience endorsed by the Mexican National Council of Urology AC.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Services Section -->
+    <section id="services" class="services-section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services-header">
+          <h2 id="services-heading" class="section-title" data-i18n="serv_title">Care for the whole family</h2>
+          <p class="section-subtitle" data-i18n="serv_sub">Choose who the visit is for.</p>
+        </div>
+
+        <!-- Accessible Segmented Tabs -->
+        <div style="text-align: center;">
+          <div class="tab-list" role="tablist" aria-label="Family care category">
+            <button class="tab-trigger" role="tab" id="tab-men" aria-selected="true" aria-controls="panel-men" tabindex="0" data-i18n="tab_men">Men</button>
+            <button class="tab-trigger" role="tab" id="tab-women" aria-selected="false" aria-controls="panel-women" tabindex="-1" data-i18n="tab_women">Women</button>
+            <button class="tab-trigger" role="tab" id="tab-kids" aria-selected="false" aria-controls="panel-kids" tabindex="-1" data-i18n="tab_kids">Kids</button>
+          </div>
+        </div>
+
+        <!-- Panel Men -->
+        <div id="panel-men" class="tab-panel active" role="tabpanel" aria-labelledby="tab-men">
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">🩺</div>
+            <h3 class="service-card-title" data-i18n="men_1_title">Benign prostatic hyperplasia</h3>
+            <p data-i18n="men_1_desc">Comprehensive evaluation and modern laser treatments to relieve urinary flow symptoms.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">🔬</div>
+            <h3 class="service-card-title" data-i18n="men_2_title">Prostate cancer</h3>
+            <p data-i18n="men_2_desc">Careful preventative screening, timely diagnosis, and minimally invasive oncological treatment.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">🌱</div>
+            <h3 class="service-card-title" data-i18n="men_3_title">Infertility</h3>
+            <p data-i18n="men_3_desc">Specialized diagnostic assessment and tailored therapies to support male reproductive health.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">✨</div>
+            <h3 class="service-card-title" data-i18n="men_4_title">Erectile dysfunction</h3>
+            <p data-i18n="men_4_desc">Private, evidence-based medical therapies designed to restore vitality and confidence.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">💎</div>
+            <h3 class="service-card-title" data-i18n="men_5_title">Urinary stones</h3>
+            <p data-i18n="men_5_desc">Fast-acting relief and precise laser lithotripsy for kidney and urinary tract stones.</p>
+          </article>
+        </div>
+
+        <!-- Panel Women -->
+        <div id="panel-women" class="tab-panel" role="tabpanel" aria-labelledby="tab-women">
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">💎</div>
+            <h3 class="service-card-title" data-i18n="women_1_title">Urinary stones</h3>
+            <p data-i18n="women_1_desc">Gentle laser fragmentation and rapid medical relief for painful kidney and bladder stones.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">💧</div>
+            <h3 class="service-card-title" data-i18n="women_2_title">Kidney diseases</h3>
+            <p data-i18n="women_2_desc">Clinical diagnosis and progressive management for infections, cysts, and renal disorders.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">🌸</div>
+            <h3 class="service-card-title" data-i18n="women_3_title">Bladder diseases</h3>
+            <p data-i18n="women_3_desc">Effective solutions for recurrent infections, discomfort, and overactive bladder symptoms.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">🛡️</div>
+            <h3 class="service-card-title" data-i18n="women_4_title">Kidney and bladder cancer</h3>
+            <p data-i18n="women_4_desc">Compassionate specialist guidance, early detection, and laparoscopic surgical options.</p>
+          </article>
+        </div>
+
+        <!-- Panel Kids -->
+        <div id="panel-kids" class="tab-panel" role="tabpanel" aria-labelledby="tab-kids">
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">🎈</div>
+            <h3 class="service-card-title" data-i18n="kids_1_title">Kidney diseases</h3>
+            <p data-i18n="kids_1_desc">Gentle and dedicated pediatric care for congenital and acquired childhood renal conditions.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">🧸</div>
+            <h3 class="service-card-title" data-i18n="kids_2_title">Bladder diseases</h3>
+            <p data-i18n="kids_2_desc">Patient, friendly consultation for childhood urinary patterns, infections, and comfort.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon-tile" aria-hidden="true">💎</div>
+            <h3 class="service-card-title" data-i18n="kids_3_title">Urinary stones</h3>
+            <p data-i18n="kids_3_desc">Minimally invasive, child-friendly approaches to safely diagnose and resolve pediatric stones.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HOLEP Feature Band -->
+    <section class="holep-section" aria-label="HOLEP laser technology">
+      <div class="container">
+        <div class="holep-card tilt-card">
+          <div class="tilt-glare"></div>
+          <div class="holep-content">
+            <h2 class="holep-title" data-i18n="holep_title">HOLEP: Holmium Laser Prostate Enucleation</h2>
+            <p data-i18n="holep_desc">
+              Modern laser treatment for benign prostatic hyperplasia, offering minimal bleeding, quick recovery, and lasting relief without incisions.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="booking.html?service=holep" class="btn btn-teal" data-i18n="holep_btn_sched">Schedule HOLEP visit</a>
+              <a href="https://api.whatsapp.com/send?phone=+528677415761&text=Hello%20Dr.%20Favio%20Salinas,%20I%20would%20like%20to%20ask%20about%20the%20HOLEP%20procedure." target="_blank" rel="noopener" class="btn btn-white" data-i18n="holep_btn_wa">Ask via WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="holep-checklist">
+            <div class="check-item">
+              <span class="check-dot" aria-hidden="true">✓</span>
+              <span data-i18n="holep_c1">Holmium laser technology</span>
+            </div>
+            <div class="check-item">
+              <span class="check-dot" aria-hidden="true">✓</span>
+              <span data-i18n="holep_c2">For benign prostatic hyperplasia</span>
+            </div>
+            <div class="check-item">
+              <span class="check-dot" aria-hidden="true">✓</span>
+              <span data-i18n="holep_c3">Laparoscopic and robotic surgery available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Conditions We Treat -->
+    <section class="conditions-section" aria-labelledby="conditions-heading">
+      <div class="container">
+        <div class="conditions-header">
+          <h2 id="conditions-heading" class="section-title" data-i18n="cond_title">Conditions we treat</h2>
+          <p class="section-subtitle" data-i18n="cond_sub">Dedicated surgical and clinical care across all core areas of urology.</p>
+        </div>
+
+        <div class="chips-wrap">
+          <span class="chip" data-i18n="chip_1">Kidney diseases</span>
+          <span class="chip" data-i18n="chip_2">Bladder diseases</span>
+          <span class="chip" data-i18n="chip_3">Benign prostatic hyperplasia</span>
+          <span class="chip" data-i18n="chip_4">Urinary stones (kidney stones)</span>
+          <span class="chip chip-peach" data-i18n="chip_5">Kidney cancer</span>
+          <span class="chip chip-peach" data-i18n="chip_6">Bladder cancer</span>
+          <span class="chip chip-peach" data-i18n="chip_7">Prostate cancer</span>
+          <span class="chip" data-i18n="chip_8">Infertility</span>
+          <span class="chip" data-i18n="chip_9">Erectile dysfunction</span>
+          <span class="chip" data-i18n="chip_10">Laparoscopic and robotic surgery</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Contact Section -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-header">
+          <h2 id="contact-heading" class="section-title" data-i18n="contact_title">Schedule your appointment now</h2>
+          <p class="section-subtitle" data-i18n="contact_sub">Personalized urological care in a pleasant and relaxed environment.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Column 1: Info Card -->
+          <div class="contact-info-card tilt-card">
+            <div class="tilt-glare"></div>
+            <div class="contact-row">
+              <div class="contact-icon-tile" aria-hidden="true">📍</div>
+              <div class="contact-row-text">
+                <span class="contact-label" data-i18n="contact_addr_lbl">Address</span>
+                <a href="https://maps.app.goo.gl/Ho2dFL6XgpH4BFFQ7" target="_blank" rel="noopener" class="contact-value">
+                  Av. Benito Juarez 2713, Col. Juarez, Nuevo Laredo, Tamps.
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon-tile" aria-hidden="true">📞</div>
+              <div class="contact-row-text">
+                <span class="contact-label" data-i18n="contact_phone_lbl">Phone</span>
+                <a href="tel:8677144361" class="contact-value">
+                  867 714 4361
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-icon-tile" aria-hidden="true">✉️</div>
+              <div class="contact-row-text">
+                <span class="contact-label" data-i18n="contact_email_lbl">Email</span>
+                <a href="mailto:drfaviosalinas@gmail.com" class="contact-value">
+                  drfaviosalinas@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Action Card -->
+          <div class="contact-action-card tilt-card">
+            <div class="tilt-glare"></div>
+            <div class="action-card-top">
+              <h3 data-i18n="contact_book_title">Book your visit</h3>
+              <p data-i18n="contact_book_desc">
+                Choose your service and time slot directly online, or get in touch via phone or WhatsApp in a calm, welcoming environment.
+              </p>
+            </div>
+
+            <div class="action-buttons">
+              <a href="booking.html" class="btn btn-teal" data-i18n="contact_book_btn">Schedule appointment online</a>
+              <a href="https://api.whatsapp.com/send?phone=+528677415761" target="_blank" rel="noopener" class="btn btn-white">WhatsApp</a>
+            </div>
+
+            <div class="social-pills-row">
+              <span class="social-pills-label" data-i18n="contact_follow">Follow Dr. Favio Salinas G.</span>
+              <div class="social-pills">
+                <a href="https://www.facebook.com/urologonuevolaredo/" target="_blank" rel="noopener" class="social-pill">Facebook</a>
+                <a href="https://www.youtube.com/c/FavioSalinas" target="_blank" rel="noopener" class="social-pill">YouTube</a>
+                <a href="https://www.instagram.com/drfaviosalinas/" target="_blank" rel="noopener" class="social-pill">Instagram</a>
+                <a href="https://www.tiktok.com/@drfaviosalinas" target="_blank" rel="noopener" class="social-pill">TikTok</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-text" data-i18n="footer_text">
+        © Dr. Favio Salinas G. · Urological Surgeon · Ced. Prof. 4967773 / 7308544 / 09610780
+      </p>
+    </div>
+  </footer>
+
+  <!-- Vanilla Inline JavaScript -->
+  <script>
+    (function() {
+      // Complete Bilingual Dictionary (English & Spanish)
+      const translations = {
+        en: {
+          brand_title: "Urological Surgeon",
+          nav_home: "Home",
+          nav_about: "About us",
+          nav_services: "Services",
+          nav_contact: "Contact",
+          nav_call: "Call",
+          nav_schedule: "Schedule visit",
+          hero_title: `Urology care that feels <span class="accent-calm">calm</span>, personal and precise.`,
+          hero_lead: "Treatment and prevention of urological diseases for men, women and kids, from a certified surgeon in Nuevo Laredo, Tamps.",
+          hero_schedule: "Schedule your appointment",
+          hero_services: "See services",
+          hero_card_sub: "Urological Surgeon · Laparoscopic and robotic surgery",
+          hero_card_cert: "Certified by the Mexican National Council of Urology AC.",
+          who_title: "Who we are",
+          who_p1: "Our mission is to provide a personalized service with high quality care to cover all your needs in the treatment and prevention of urological diseases.",
+          who_p2: "Dr. Favio Salinas G. is a dedicated and experienced urologist surgeon in Nuevo Laredo, Tamps., who works closely with his patients to maintain and improve their health.",
+          who_c1_title: "Personalized care",
+          who_c1_text: "Attentive clinical service shaped around each patient’s unique health requirements and peace of mind.",
+          who_c2_title: "Comprehensive services",
+          who_c2_text: "We believe in providing comprehensive care services to our patients in a pleasant and relaxed environment.",
+          who_c3_title: "Certified surgeon",
+          who_c3_text: "Rigorous surgical experience endorsed by the Mexican National Council of Urology AC.",
+          serv_title: "Care for the whole family",
+          serv_sub: "Choose who the visit is for.",
+          tab_men: "Men",
+          tab_women: "Women",
+          tab_kids: "Kids",
+          men_1_title: "Benign prostatic hyperplasia",
+          men_1_desc: "Comprehensive evaluation and modern laser treatments to relieve urinary flow symptoms.",
+          men_2_title: "Prostate cancer",
+          men_2_desc: "Careful preventative screening, timely diagnosis, and minimally invasive oncological treatment.",
+          men_3_title: "Infertility",
+          men_3_desc: "Specialized diagnostic assessment and tailored therapies to support male reproductive health.",
+          men_4_title: "Erectile dysfunction",
+          men_4_desc: "Private, evidence-based medical therapies designed to restore vitality and confidence.",
+          men_5_title: "Urinary stones",
+          men_5_desc: "Fast-acting relief and precise laser lithotripsy for kidney and urinary tract stones.",
+          women_1_title: "Urinary stones",
+          women_1_desc: "Gentle laser fragmentation and rapid medical relief for painful kidney and bladder stones.",
+          women_2_title: "Kidney diseases",
+          women_2_desc: "Clinical diagnosis and progressive management for infections, cysts, and renal disorders.",
+          women_3_title: "Bladder diseases",
+          women_3_desc: "Effective solutions for recurrent infections, discomfort, and overactive bladder symptoms.",
+          women_4_title: "Kidney and bladder cancer",
+          women_4_desc: "Compassionate specialist guidance, early detection, and laparoscopic surgical options.",
+          kids_1_title: "Kidney diseases",
+          kids_1_desc: "Gentle and dedicated pediatric care for congenital and acquired childhood renal conditions.",
+          kids_2_title: "Bladder diseases",
+          kids_2_desc: "Patient, friendly consultation for childhood urinary patterns, infections, and comfort.",
+          kids_3_title: "Urinary stones",
+          kids_3_desc: "Minimally invasive, child-friendly approaches to safely diagnose and resolve pediatric stones.",
+          holep_title: "HOLEP: Holmium Laser Prostate Enucleation",
+          holep_desc: "Modern laser treatment for benign prostatic hyperplasia, offering minimal bleeding, quick recovery, and lasting relief without incisions.",
+          holep_btn_sched: "Schedule HOLEP visit",
+          holep_btn_wa: "Ask via WhatsApp",
+          holep_c1: "Holmium laser technology",
+          holep_c2: "For benign prostatic hyperplasia",
+          holep_c3: "Laparoscopic and robotic surgery available",
+          cond_title: "Conditions we treat",
+          cond_sub: "Dedicated surgical and clinical care across all core areas of urology.",
+          chip_1: "Kidney diseases",
+          chip_2: "Bladder diseases",
+          chip_3: "Benign prostatic hyperplasia",
+          chip_4: "Urinary stones (kidney stones)",
+          chip_5: "Kidney cancer",
+          chip_6: "Bladder cancer",
+          chip_7: "Prostate cancer",
+          chip_8: "Infertility",
+          chip_9: "Erectile dysfunction",
+          chip_10: "Laparoscopic and robotic surgery",
+          contact_title: "Schedule your appointment now",
+          contact_sub: "Personalized urological care in a pleasant and relaxed environment.",
+          contact_addr_lbl: "Address",
+          contact_phone_lbl: "Phone",
+          contact_email_lbl: "Email",
+          contact_book_title: "Book your visit",
+          contact_book_desc: "Choose your service and time slot directly online, or get in touch via phone or WhatsApp in a calm, welcoming environment.",
+          contact_book_btn: "Schedule appointment online",
+          contact_follow: "Follow Dr. Favio Salinas G.",
+          footer_text: "© Dr. Favio Salinas G. · Urological Surgeon · Ced. Prof. 4967773 / 7308544 / 09610780"
+        },
+        es: {
+          brand_title: "Cirujano Urólogo",
+          nav_home: "Inicio",
+          nav_about: "Quiénes somos",
+          nav_services: "Servicios",
+          nav_contact: "Contacto",
+          nav_call: "Llamar",
+          nav_schedule: "Agendar cita",
+          hero_title: `Atención urológica que se siente <span class="accent-calm">serena</span>, personal y precisa.`,
+          hero_lead: "Tratamiento y prevención de enfermedades urológicas para hombres, mujeres y niños, con un cirujano certificado en Nuevo Laredo, Tamps.",
+          hero_schedule: "Agendar su cita",
+          hero_services: "Ver servicios",
+          hero_card_sub: "Cirujano Urólogo · Cirugía laparoscópica y robótica",
+          hero_card_cert: "Certificado por el Consejo Nacional Mexicano de Urología AC.",
+          who_title: "Quiénes somos",
+          who_p1: "Nuestra misión es brindar un servicio personalizado con alta calidad médica para cubrir todas sus necesidades en el tratamiento y prevención de enfermedades urológicas.",
+          who_p2: "El Dr. Favio Salinas G. es un cirujano urólogo dedicado y experimentado en Nuevo Laredo, Tamps., quien trabaja estrechamente con sus pacientes para mantener y mejorar su salud.",
+          who_c1_title: "Atención personalizada",
+          who_c1_text: "Servicio clínico atento enfocado en los requerimientos de salud y tranquilidad de cada paciente.",
+          who_c2_title: "Servicios integrales",
+          who_c2_text: "Brindamos servicios de atención médica integral a nuestros pacientes en un ambiente agradable y sereno.",
+          who_c3_title: "Cirujano certificado",
+          who_c3_text: "Amplia trayectoria quirúrgica avalada por el Consejo Nacional Mexicano de Urología AC.",
+          serv_title: "Atención para toda la familia",
+          serv_sub: "Elija para quién es la consulta.",
+          tab_men: "Hombres",
+          tab_women: "Mujeres",
+          tab_kids: "Niños",
+          men_1_title: "Hiperplasia prostática benigna",
+          men_1_desc: "Evaluación integral y tratamientos láser modernos para aliviar síntomas del flujo urinario.",
+          men_2_title: "Cáncer de próstata",
+          men_2_desc: "Detección oportuna, diagnóstico preventivo y tratamiento oncológico de mínima invasión.",
+          men_3_title: "Infertilidad",
+          men_3_desc: "Evaluación diagnóstica especializada y terapias para apoyar la salud reproductiva masculina.",
+          men_4_title: "Disfunción eréctil",
+          men_4_desc: "Terapias médicas privadas y comprobadas diseñadas para restaurar la vitalidad y confianza.",
+          men_5_title: "Cálculos urinarios",
+          men_5_desc: "Alivio oportuno y litotricia láser de precisión para cálculos renales y urinarios.",
+          women_1_title: "Cálculos urinarios",
+          women_1_desc: "Fragmentación láser precisa y alivio rápido para cálculos renales y vesicales.",
+          women_2_title: "Enfermedades del riñón",
+          women_2_desc: "Diagnóstico clínico y tratamiento oportuno de infecciones, quistes y trastornos renales.",
+          women_3_title: "Enfermedades de la vejiga",
+          women_3_desc: "Soluciones eficaces para infecciones recurrentes, molestias y vejiga hiperactiva.",
+          women_4_title: "Cáncer de riñón y vejiga",
+          women_4_desc: "Orientación médica especialista, detección temprana y opciones quirúrgicas laparoscópicas.",
+          kids_1_title: "Enfermedades del riñón",
+          kids_1_desc: "Atención pediátrica cuidadosa para condiciones renales infantiles congénitas y adquiridas.",
+          kids_2_title: "Enfermedades de la vejiga",
+          kids_2_desc: "Consulta paciente y cálida para patrones urinarios infantiles, infecciones y bienestar.",
+          kids_3_title: "Cálculos urinarios",
+          kids_3_desc: "Abordajes pediátricos mínimamente invasivos para diagnosticar y resolver cálculos de forma segura.",
+          holep_title: "HOLEP: Enucleación Prostática con Láser Holmio",
+          holep_desc: "Tratamiento láser moderno para hiperplasia prostática benigna, con mínimo sangrado, rápida recuperación y alivio duradero sin incisiones.",
+          holep_btn_sched: "Agendar cita HOLEP",
+          holep_btn_wa: "Preguntar por WhatsApp",
+          holep_c1: "Tecnología láser Holmio",
+          holep_c2: "Para hiperplasia prostática benigna",
+          holep_c3: "Cirugía laparoscópica y robótica disponible",
+          cond_title: "Condiciones que tratamos",
+          cond_sub: "Atención quirúrgica y clínica dedicada en todas las áreas de la urología.",
+          chip_1: "Enfermedades del riñón",
+          chip_2: "Enfermedades de la vejiga",
+          chip_3: "Hiperplasia prostática benigna",
+          chip_4: "Cálculos urinarios (piedras en el riñón)",
+          chip_5: "Cáncer de riñón",
+          chip_6: "Cáncer de vejiga",
+          chip_7: "Cáncer de próstata",
+          chip_8: "Infertilidad",
+          chip_9: "Disfunción eréctil",
+          chip_10: "Cirugía laparoscópica y robótica",
+          contact_title: "Agende su cita ahora",
+          contact_sub: "Atención urológica personalizada en un ambiente agradable y sereno.",
+          contact_addr_lbl: "Dirección",
+          contact_phone_lbl: "Teléfono",
+          contact_email_lbl: "Correo",
+          contact_book_title: "Reserve su consulta",
+          contact_book_desc: "Seleccione su servicio y horario directamente en línea, o contáctenos por teléfono o WhatsApp en un entorno sereno y acogedor.",
+          contact_book_btn: "Agendar cita en línea",
+          contact_follow: "Siga al Dr. Favio Salinas G.",
+          footer_text: "© Dr. Favio Salinas G. · Cirujano Urólogo · Céd. Prof. 4967773 / 7308544 / 09610780"
+        }
+      };
+
+      // Language Switcher Function
+      function setLanguage(lang) {
+        if (!translations[lang]) return;
+        document.documentElement.lang = lang;
+        
+        // Update all elements with data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+          }
+        });
+
+        // Update active states on language buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+
+        try {
+          localStorage.setItem('dr_favio_lang', lang);
+        } catch (e) {}
+      }
+
+      // Bind Language Switcher Buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetLang = btn.getAttribute('data-lang');
+          setLanguage(targetLang);
+        });
+      });
+
+      // Load saved language or default to 'es' (Spanish is native in Nuevo Laredo)
+      const initialLang = localStorage.getItem('dr_favio_lang') || 'es';
+      setLanguage(initialLang);
+
+      // Accessible Tab Switching
+      const tabs = Array.from(document.querySelectorAll('.tab-trigger'));
+      const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+      function switchTab(targetTab) {
+        tabs.forEach(tab => {
+          const isSelected = tab === targetTab;
+          tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+          tab.setAttribute('tabindex', isSelected ? '0' : '-1');
+        });
+
+        const targetPanelId = targetTab.getAttribute('aria-controls');
+        panels.forEach(panel => {
+          if (panel.id === targetPanelId) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        });
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => switchTab(tab));
+
+        tab.addEventListener('keydown', (e) => {
+          let nextIndex = index;
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            nextIndex = (index + 1) % tabs.length;
+            tabs[nextIndex].focus();
+            switchTab(tabs[nextIndex]);
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            nextIndex = (index - 1 + tabs.length) % tabs.length;
+            tabs[nextIndex].focus();
+            switchTab(tabs[nextIndex]);
+          }
+        });
+      });
+
+      // 3D Touch Tilt & Dynamic Specular Reflection
+      const tiltCards = document.querySelectorAll('.tilt-card');
+      tiltCards.forEach(card => {
+        card.addEventListener('pointermove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          const xPercent = (x / rect.width) * 100;
+          const yPercent = (y / rect.height) * 100;
+          const rotateX = ((y / rect.height) - 0.5) * -10;
+          const rotateY = ((x / rect.width) - 0.5) * 10;
+
+          card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
+          card.style.setProperty('--mouse-x', `${xPercent}%`);
+          card.style.setProperty('--mouse-y', `${yPercent}%`);
+        });
+
+        card.addEventListener('pointerleave', () => {
+          card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

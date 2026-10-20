@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Strict Light Luxe & Modern Palette - Zero Dark Elements */
+  --c-ivory: #FAF7F2;
+  --c-ivory-warm: #F4EFEB;
+  --c-parchment: #F8F4EC;
+  --c-card-bg: #FFFFFF;
+  
+  --c-gold: #C49B6E;
+  --c-gold-hover: #AF8556;
+  --c-gold-tint: #F8F2E9;
+  --c-gold-border: #E8D6C3;
+
+  --c-slate: #8FA4AC;
+  --c-slate-light: #E4ECEF;
+  --c-slate-subtle: #F0F5F7;
+
+  --c-teal: #0A5B6F;
+  --c-teal-dark: #084959;
+  --c-teal-tint: #E7F3F5;
+  --c-teal-light: #167D94;
+
+  --c-aqua: #569EA8;
+  --c-aqua-soft: #D9EDF0;
+
+  --c-sky: #E0ECEF;
+  --c-sky-light: #F4F8FA;
+
+  /* Typographic colors */
+  --c-text-heading: #0F3742;
+  --c-text-body: #476670;
+  --c-text-muted: #79959E;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'Space Grotesk', monospace, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--c-ivory);
+  color: var(--c-text-body);
+}
+
+body {
+  background-color: var(--c-ivory);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography styles */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Subtle architectural grid pattern in light tone */
+.bg-grid-hairline {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(143, 164, 172, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(143, 164, 172, 0.08) 1px, transparent 1px);
+}
+
+/* Physical Medical Embossed Seal & Stamp */
+.stamp-seal {
+  border: 1.5px dashed var(--c-gold);
+  border-radius: 9999px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.stamp-seal::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(196, 155, 110, 0.4);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Hairline borders & Dossier Layout */
+.border-hairline {
+  border: 1px solid #E1EBEB;
+}
+
+.border-hairline-b {
+  border-bottom: 1px solid #E1EBEB;
+}
+
+.border-hairline-r {
+  border-right: 1px solid #E1EBEB;
+}
+
+/* Bespoke Gold Accents */
+.gold-chip {
+  background: var(--c-gold-tint);
+  border: 1px solid var(--c-gold-border);
+  color: #8C6436;
+}
+
+/* Editorial Medical Slate Card */
+.dossier-card {
+  background: #FFFFFF;
+  border: 1px solid #E2EAEB;
+  box-shadow: 0 4px 20px -6px rgba(10, 91, 111, 0.05), 0 2px 6px -2px rgba(196, 155, 110, 0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dossier-card:hover {
+  border-color: var(--c-aqua);
+  box-shadow: 0 16px 36px -12px rgba(10, 91, 111, 0.12), 0 4px 12px -2px rgba(196, 155, 110, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Buttons with tactile editorial feel */
+.btn-surgical {
+  background: linear-gradient(135deg, var(--c-teal) 0%, #0F6A80 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(10, 91, 111, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(10, 91, 111, 0.2);
+}
+
+.btn-surgical:hover {
+  background: linear-gradient(135deg, var(--c-teal-dark) 0%, #0C5C70 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10, 91, 111, 0.3);
+}
+
+.btn-brass {
+  background: linear-gradient(135deg, var(--c-gold) 0%, #D4A977 100%);
+  color: #FFFFFF;
+  border: 1px solid var(--c-gold-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(196, 155, 110, 0.25);
+}
+
+.btn-brass:hover {
+  background: linear-gradient(135deg, var(--c-gold-hover) 0%, #BD8F5E 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(196, 155, 110, 0.35);
+}
+
+.btn-ghost-teal {
+  background: #FFFFFF;
+  color: var(--c-teal);
+  border: 1.5px solid #D1E2E5;
+  transition: all 0.25s ease;
+}
+
+.btn-ghost-teal:hover {
+  border-color: var(--c-teal);
+  background: var(--c-teal-tint);
+  transform: translateY(-1.5px);
+}
+
+/* Live clinical beacon indicator */
+.beacon-dot {
+  position: relative;
+}
+
+.beacon-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 9999px;
+  background-color: #10B981;
+  opacity: 0.4;
+  animation: beaconPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes beaconPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/* Interactive Medical Paper Prescription / Triage Sheet */
+.paper-prescription {
+  background: #FFFFFF;
+  border: 1px solid #DFE7E8;
+  box-shadow: 0 10px 35px -10px rgba(15, 55, 66, 0.08);
+  position: relative;
+}
+
+.paper-prescription::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--c-teal) 0%, var(--c-gold) 50%, var(--c-aqua) 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--c-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: #C4D3D7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-teal);
+}
+
+/* Range input styling for the HoLEP Prostate Size Simulator */
+input[type=range] {
+  accent-color: var(--c-teal);
+}
+
+/* Subtle corner badges */
+.corner-bracket-tl {
+  position: relative;
+}
+.corner-bracket-tl::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--c-gold);
+  border-left: 2px solid var(--c-gold);
+}
+.corner-bracket-tr::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--c-gold);
+  border-right: 2px solid var(--c-gold);
+}

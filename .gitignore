@@ -1,0 +1,10 @@
+node_modules/
+*.log
+screenshot-*.png
+booking-*.png
+test-*.png
+debug-*.png
+capture_*.js
+check_widths.js
+test_*.js
+debug_*.js

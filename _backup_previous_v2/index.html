@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Favio Salinas G. | Cirujano Urólogo en Nuevo Laredo | Láser HoLEP & Cirugía Robótica</title>
+  <meta name="description" content="Práctica privada del Dr. Favio Salinas G., Cirujano Urólogo certificado por el Consejo Nacional Mexicano de Urología A.C. Especialista en Láser HoLEP de próstata, litiasis renal y cirugía robótica en Nuevo Laredo, Tamaulipas.">
+  
+  <!-- Tailwind CSS CDN with Luxe & Modern Custom Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: {
+              DEFAULT: '#FAF7F2',
+              warm: '#F4EFEB',
+              card: '#FFFFFF'
+            },
+            gold: {
+              DEFAULT: '#C49B6E',
+              tint: '#F8F2E9',
+              hover: '#AF8556',
+              border: '#E8D6C3'
+            },
+            slate: {
+              DEFAULT: '#8FA4AC',
+              light: '#E4ECEF',
+              subtle: '#F0F5F7',
+              text: '#476670'
+            },
+            teal: {
+              DEFAULT: '#0A5B6F',
+              dark: '#084959',
+              tint: '#E7F3F5',
+              light: '#167D94'
+            },
+            aqua: {
+              DEFAULT: '#569EA8',
+              soft: '#D9EDF0'
+            },
+            sky: {
+              DEFAULT: '#E0ECEF',
+              light: '#F4F8FA'
+            },
+            heading: '#0F3742'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Bespoke Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-ivory text-slate-text bg-grid-hairline selection:bg-teal selection:text-white">
+
+  <!-- Top Surgical Telemetry & Real-Time Status Bar -->
+  <aside class="relative z-50 bg-white/95 border-b border-hairline px-4 sm:px-8 py-2.5 text-xs text-[#3E5F69]">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5">
+      
+      <!-- Telemetry & Clock -->
+      <div class="flex items-center gap-3.5 flex-wrap justify-center md:justify-start font-mono text-[11px]">
+        <div id="clinic-status-badge" class="flex items-center text-teal font-bold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block mr-1.5 beacon-dot"></span>
+          <span data-i18n="status_open">Consultorio Abierto • Citas Disponibles</span>
+        </div>
+        <span class="text-[#BAC7CA] hidden sm:inline">│</span>
+        <div class="flex items-center gap-1 text-slate font-medium">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-gold"></i>
+          <span id="clinic-live-clock">12:00 PM (CST • Nuevo Laredo)</span>
+        </div>
+      </div>
+
+      <!-- Credential Summary & Direct Telephony -->
+      <div class="flex items-center gap-4 text-[11px] font-mono">
+        <span class="hidden lg:inline text-[#587984]" data-i18n="top_council">Consejo Nal. Mex. de Urología A.C.</span>
+        <span class="hidden lg:inline text-[#BAC7CA]">│</span>
+        <a href="https://maps.app.goo.gl/Ho2dFL6XgpH4BFFQ7" target="_blank" class="hover:text-teal flex items-center gap-1 transition-colors">
+          <i data-lucide="map-pin" class="w-3 h-3 text-gold"></i>
+          <span data-i18n="top_corridor">Nuevo Laredo, Tamps. (Corredor Binacional)</span>
+        </a>
+        <span class="text-[#BAC7CA]">│</span>
+        <a href="tel:8677144361" class="font-bold text-teal hover:text-gold flex items-center gap-1 transition-colors">
+          <i data-lucide="phone" class="w-3 h-3 text-gold"></i>
+          <span>867 714 4361</span>
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Editorial Architectural Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-hairline transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+      
+      <!-- Doctor Atelier Insignia -->
+      <a href="#inicio" class="flex items-center gap-4 group">
+        <div class="w-14 h-14 rounded-xl bg-ivory-warm border-hairline flex flex-col items-center justify-center p-1 relative transition-all group-hover:border-gold">
+          <span class="font-serif font-bold text-xl text-teal leading-none">FS</span>
+          <span class="font-mono text-[9px] uppercase tracking-widest text-gold font-bold mt-1">UROL</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-serif font-bold text-2xl sm:text-3xl text-heading tracking-tight">Dr. Favio Salinas G.</h1>
+          </div>
+          <p class="font-mono text-[11px] uppercase tracking-wider text-slate" data-i18n="brand_role">
+            Cirujano Urólogo • Especialista Certificado
+          </p>
+        </div>
+      </a>
+
+      <!-- Architectural Navigation Links -->
+      <nav class="hidden xl:flex items-center gap-8 text-xs font-mono font-semibold uppercase tracking-wider text-[#2B505B]">
+        <a href="#perfil" class="hover:text-teal transition-colors" data-i18n="nav_about">Perfil Profesional</a>
+        <a href="#matriz" class="hover:text-teal transition-colors" data-i18n="nav_matrix">Especialidades Clínicas</a>
+        <a href="#holep-tech" class="hover:text-teal transition-colors flex items-center gap-1">
+          <span data-i18n="nav_holep">Tecnología HoLEP</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+        </a>
+        <a href="#triaje" class="hover:text-teal transition-colors" data-i18n="nav_intake">Papeleta de Consulta</a>
+        <a href="#binacional" class="hover:text-teal transition-colors" data-i18n="nav_border">Pacientes Binacionales (USA)</a>
+        <a href="#contacto" class="hover:text-teal transition-colors" data-i18n="nav_contact">Consultorio</a>
+      </nav>
+
+      <!-- Language Engine & Quick Intake CTA -->
+      <div class="hidden sm:flex items-center gap-3">
+        <!-- Bilingual Switcher Button -->
+        <button id="lang-switch-btn" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-hairline bg-white hover:border-gold font-mono text-xs font-bold text-teal transition-all shadow-sm" title="Cambiar idioma / Switch language">
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-gold"></i>
+          <span id="current-lang-code">ES</span>
+        </button>
+
+        <!-- Primary Action -->
+        <a href="#triaje" class="btn-surgical px-5 py-2.5 rounded-xl font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+          <span data-i18n="nav_quick_book">Agendar Consulta</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 xl:hidden">
+        <button id="mobile-drawer-toggle" class="p-2.5 rounded-xl border border-hairline bg-white text-teal hover:bg-sky-light transition-colors">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Panel -->
+    <div id="mobile-drawer-panel" class="hidden xl:hidden border-t border-hairline bg-white/95 backdrop-blur-md px-6 py-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-hairline">
+        <span class="font-mono text-xs text-slate uppercase" data-i18n="mobile_lang_label">Idioma / Language</span>
+        <button id="mobile-lang-switch-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-hairline bg-white font-mono text-xs font-bold text-teal">
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-gold"></i>
+          <span id="mobile-lang-code">ES</span>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-3 font-mono text-xs font-bold uppercase tracking-wider text-heading">
+        <a href="#perfil" class="mobile-menu-link py-2 border-b border-hairline hover:text-teal" data-i18n="nav_about">Perfil Profesional</a>
+        <a href="#matriz" class="mobile-menu-link py-2 border-b border-hairline hover:text-teal" data-i18n="nav_matrix">Especialidades Clínicas</a>
+        <a href="#holep-tech" class="mobile-menu-link py-2 border-b border-hairline hover:text-teal" data-i18n="nav_holep">Tecnología HoLEP</a>
+        <a href="#triaje" class="mobile-menu-link py-2 border-b border-hairline hover:text-teal" data-i18n="nav_intake">Papeleta de Consulta</a>
+        <a href="#binacional" class="mobile-menu-link py-2 border-b border-hairline hover:text-teal" data-i18n="nav_border">Pacientes Binacionales (USA)</a>
+        <a href="#contacto" class="mobile-menu-link py-2 border-b border-hairline hover:text-teal" data-i18n="nav_contact">Consultorio & Ubicación</a>
+      </nav>
+      <div class="pt-4 flex flex-col gap-3">
+        <a href="#triaje" class="btn-surgical w-full py-3 rounded-xl text-center font-mono text-xs font-bold uppercase tracking-wider" data-i18n="hero_btn_intake">
+          Generar Papeleta de Cita
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+528677415761&text=Hola%20Dr.%20Favio%20Salinas,%20solicito%20información%20de%20consulta" target="_blank" class="btn-brass w-full py-3 rounded-xl text-center font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span data-i18n="wp_direct">WhatsApp Directo</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Editorial Hero Section: Asymmetry, Official Seals & Clinical Telemetry -->
+  <section id="inicio" class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 border-hairline-b overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+        
+        <!-- Left: Editorial Clinical Thesis -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Regulatory accreditation chip -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg gold-chip font-mono text-[11px] font-bold uppercase tracking-wider">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold shrink-0"></i>
+            <span data-i18n="hero_label">CONSEJO NACIONAL MEXICANO DE UROLOGÍA A.C. • CERTIFICADO OFICIAL</span>
+          </div>
+
+          <!-- Main Editorial Display Title -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-heading leading-[1.08] tracking-tight" data-i18n-html="hero_title">
+            Cirugía Urológica de <span class="italic font-normal text-teal">Mínima Invasión</span> & Tecnología Láser HoLEP
+          </h1>
+
+          <!-- Academic and surgical stance -->
+          <p class="text-base sm:text-lg text-slate-text max-w-2xl leading-relaxed" data-i18n-html="hero_subtitle">
+            Práctica urológica privada de alta especialidad a cargo del <strong>Dr. Favio Salinas G.</strong> Cuidado vanguardista, ético y sin cortes externos para padecimientos de riñón, vejiga y próstata en Nuevo Laredo.
+          </p>
+
+          <!-- Verified License Strip (Cédulas Profesionales) -->
+          <div class="p-5 rounded-2xl bg-white border-hairline shadow-sm space-y-3 font-mono text-xs">
+            <div class="text-[11px] font-bold text-slate uppercase tracking-widest flex items-center gap-1.5">
+              <i data-lucide="file-badge-2" class="w-3.5 h-3.5 text-gold"></i>
+              <span data-i18n="cedula_title">Cédulas Profesionales Registradas ante la SEP</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-[#335661]">
+              <div class="p-2.5 rounded-xl bg-ivory-warm border border-[#EBE3D8]">
+                <span class="block text-[10px] text-slate uppercase" data-i18n="cedula_1_label">Médico Cirujano</span>
+                <strong class="text-xs text-heading">Ced. 4967773</strong>
+              </div>
+              <div class="p-2.5 rounded-xl bg-ivory-warm border border-[#EBE3D8]">
+                <span class="block text-[10px] text-slate uppercase" data-i18n="cedula_2_label">Esp. en Urología</span>
+                <strong class="text-xs text-heading">Ced. 7308544</strong>
+              </div>
+              <div class="p-2.5 rounded-xl bg-ivory-warm border border-[#EBE3D8]">
+                <span class="block text-[10px] text-slate uppercase" data-i18n="cedula_3_label">Certificación Nal.</span>
+                <strong class="text-xs text-heading">Ced. 09610780</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center gap-3.5 pt-2">
+            <a href="#triaje" class="btn-surgical w-full sm:w-auto px-7 py-4 rounded-xl font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5">
+              <i data-lucide="edit-3" class="w-4 h-4"></i>
+              <span data-i18n="hero_btn_intake">Generar Papeleta de Cita</span>
+            </a>
+            <a href="#holep-tech" class="btn-ghost-teal w-full sm:w-auto px-6 py-4 rounded-xl font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+              <span data-i18n="hero_btn_holep">Ver Protocolo HoLEP Láser</span>
+              <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Digital Surgical Slate (Tactile Clinical Card with Live Feasibility) -->
+        <div id="perfil" class="lg:col-span-5 relative">
+          
+          <div class="dossier-card rounded-3xl p-7 border-hairline corner-bracket-tl corner-bracket-tr relative bg-white">
+            
+            <!-- Stamp of Clinical Rigor -->
+            <div class="flex items-center justify-between pb-5 border-hairline-b">
+              <div class="stamp-seal w-12 h-12 flex flex-col items-center justify-center bg-gold-tint text-gold font-mono text-[9px] font-bold leading-tight">
+                <span>CONSEJO</span>
+                <span>URÓLOGOS</span>
+              </div>
+              <div class="text-right font-mono text-[11px]">
+                <span class="text-slate uppercase block" data-i18n="atelier_title">Atelier Quirúrgico</span>
+                <strong class="text-teal" data-i18n="atelier_city">Nuevo Laredo, México</strong>
+              </div>
+            </div>
+
+            <!-- Specialist Portrait & Mission Summary -->
+            <div class="py-6 space-y-3">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-xl bg-teal text-white flex items-center justify-center font-serif text-xl font-bold">
+                  Dr.
+                </div>
+                <div>
+                  <h3 class="font-serif font-bold text-xl text-heading">Dr. Favio Salinas G.</h3>
+                  <p class="font-mono text-xs text-gold font-bold" data-i18n="doctor_name_role">Cirujano Urólogo de Alta Especialidad</p>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-text leading-relaxed pt-2" data-i18n="atelier_mission">
+                "Nuestra misión es brindar un servicio personalizado con alta calidad médica para el tratamiento y prevención de padecimientos urológicos en un entorno sereno, digno y de total confidencialidad."
+              </p>
+            </div>
+
+            <!-- Core Technical Capacities Breakdown -->
+            <div class="space-y-2.5 pt-2 pb-5 border-hairline-b font-mono text-xs">
+              <div class="flex items-center justify-between p-3 rounded-xl bg-ivory-warm/70 border border-[#ECE5DC]">
+                <span class="text-heading font-semibold flex items-center gap-2">
+                  <i data-lucide="zap" class="w-4 h-4 text-teal"></i>
+                  <span data-i18n="cap_holep">Láser HoLEP de Próstata</span>
+                </span>
+                <span class="text-[10px] text-teal font-bold uppercase" data-i18n="cap_holep_badge">Gold Standard</span>
+              </div>
+
+              <div class="flex items-center justify-between p-3 rounded-xl bg-ivory-warm/70 border border-[#ECE5DC]">
+                <span class="text-heading font-semibold flex items-center gap-2">
+                  <i data-lucide="gem" class="w-4 h-4 text-gold"></i>
+                  <span data-i18n="cap_stones">Litiasis Renal Flexible (RIRS)</span>
+                </span>
+                <span class="text-[10px] text-gold font-bold uppercase" data-i18n="cap_stones_badge">Sin Incisión</span>
+              </div>
+
+              <div class="flex items-center justify-between p-3 rounded-xl bg-ivory-warm/70 border border-[#ECE5DC]">
+                <span class="text-heading font-semibold flex items-center gap-2">
+                  <i data-lucide="cpu" class="w-4 h-4 text-teal"></i>
+                  <span data-i18n="cap_robotics">Cirugía Robótica y Laparoscopía</span>
+                </span>
+                <span class="text-[10px] text-slate font-bold uppercase" data-i18n="cap_robotics_badge">Mínima Invasión</span>
+              </div>
+            </div>
+
+            <!-- Card Bottom: Telephony & WhatsApp Dispatch -->
+            <div class="pt-5 flex items-center gap-3">
+              <a href="tel:8677144361" class="btn-ghost-teal flex-1 py-3 rounded-xl text-center font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                <i data-lucide="phone-forwarded" class="w-3.5 h-3.5 text-teal"></i>
+                <span data-i18n="tel_label">Tel: 867 714 4361</span>
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=+528677415761&text=Hola%20Dr.%20Favio%20Salinas,%20deseo%20coordinar%20una%20cita%20médica" target="_blank" class="btn-surgical px-4 py-3 rounded-xl font-mono text-xs font-bold" title="WhatsApp Oficial">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive HoLEP Clinical Feasibility Simulator (Unique Scientific Feature) -->
+  <section id="holep-tech" class="py-16 sm:py-24 border-hairline-b bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <span class="font-mono text-xs font-bold uppercase tracking-widest text-gold block mb-2" data-i18n="sim_tag">
+          SIMULADOR QUIRÚRGICO DE PRÓSTATA • EVIDENCIA CLÍNICA
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-heading" data-i18n="sim_title">
+          ¿Por qué el Láser HoLEP es el Gold Standard Mundial?
+        </h2>
+        <p class="text-sm sm:text-base text-slate-text mt-3 leading-relaxed" data-i18n="sim_desc">
+          Ajuste el volumen estimado de la próstata en gramos para observar la comparativa clínica en tiempo real entre la resección tradicional (RTUP) y la enucleación con láser Holmio (HoLEP).
+        </p>
+      </div>
+
+      <!-- Interactive Simulator Box -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center dossier-card rounded-3xl p-6 sm:p-10 border-hairline bg-ivory">
+        
+        <!-- Left Slider Controller -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-5 rounded-2xl bg-white border-hairline shadow-sm space-y-4">
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="text-slate uppercase font-bold" data-i18n="sim_vol_label">Volumen Prostático</span>
+              <span id="holep-size-val" class="text-2xl font-bold text-teal">75 g</span>
+            </div>
+            
+            <input type="range" id="holep-slider" min="30" max="220" value="75" step="5" class="w-full h-2 bg-[#E1EBED] rounded-lg cursor-pointer">
+            
+            <div class="flex justify-between font-mono text-[10px] text-slate">
+              <span data-i18n="sim_vol_mild">30 g (Normal / Leve)</span>
+              <span data-i18n="sim_vol_limit">80 g (Límite RTUP)</span>
+              <span data-i18n="sim_vol_giant">220 g (Gigante)</span>
+            </div>
+          </div>
+
+          <div class="space-y-3 font-mono text-xs">
+            <div class="flex items-center justify-between p-3 rounded-xl bg-white border-hairline">
+              <span class="text-slate" data-i18n="sim_stay_label">Estancia Hospitalaria:</span>
+              <strong id="holep-hospital-meter" class="text-teal font-bold">24 horas</strong>
+            </div>
+            <div class="flex items-center justify-between p-3 rounded-xl bg-white border-hairline">
+              <span class="text-slate" data-i18n="sim_bleed_label">Riesgo de Sangrado:</span>
+              <div class="w-32 bg-[#E5ECEE] h-2.5 rounded-full overflow-hidden">
+                <div id="holep-bleeding-meter" class="bg-teal h-full transition-all duration-300" style="width: 18%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side-by-Side Clinical Verdict -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <!-- HoLEP Laser Verdict -->
+          <div class="p-6 rounded-2xl bg-white border border-teal/30 shadow-sm relative">
+            <div class="flex items-center justify-between mb-3 font-mono">
+              <span class="text-xs font-bold text-teal uppercase tracking-wider" data-i18n="sim_holep_header">Láser HoLEP</span>
+              <i data-lucide="check-circle" class="w-4 h-4 text-teal"></i>
+            </div>
+            <div id="holep-verdict" class="space-y-2">
+              <!-- Dynamically populated via app.js with bilingual support -->
+            </div>
+          </div>
+
+          <!-- Traditional TURP Verdict -->
+          <div class="p-6 rounded-2xl bg-white border border-[#E9D9D5] shadow-sm relative">
+            <div class="flex items-center justify-between mb-3 font-mono">
+              <span class="text-xs font-bold text-[#A84B38] uppercase tracking-wider" data-i18n="sim_turp_header">Cirugía Tradicional (RTUP)</span>
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-[#A84B38]"></i>
+            </div>
+            <div id="turp-verdict" class="space-y-2">
+              <!-- Dynamically populated via app.js with bilingual support -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Atelier Quirúrgico: Protocolo en 4 Fases (Walkthrough) -->
+  <section class="py-16 sm:py-24 border-hairline-b bg-ivory">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-gold block mb-2" data-i18n="steps_tag">
+            RIGOR QUIRÚRGICO PASO A PASO
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-heading" data-i18n="steps_title">
+            Técnica Quirúrgica de Enucleación HoLEP
+          </h2>
+        </div>
+        <p class="font-mono text-xs text-slate max-w-md" data-i18n="steps_desc">
+          El procedimiento se realiza íntegramente a través de la uretra guiado por cámara endoscópica de alta definición y fibra láser de 2,100 nm.
+        </p>
+      </div>
+
+      <!-- Injected from app.js (surgical steps) -->
+      <div id="surgical-steps-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Matriz Clínica Familiar (Men, Women, Kids & Advanced Surgery) -->
+  <section id="matriz" class="py-16 sm:py-24 border-hairline-b bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-gold block mb-2" data-i18n="matrix_tag">
+            CATÁLOGO DIAGNÓSTICO & TRATAMIENTOS
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-heading" data-i18n="matrix_title">
+            Matriz de Atención Médica y Quirúrgica
+          </h2>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+          <button class="matrix-filter-tab px-4 py-2 rounded-lg bg-teal text-white font-bold transition-all" data-demo="all" data-i18n="tab_all">
+            Todos los Grupos
+          </button>
+          <button class="matrix-filter-tab px-4 py-2 rounded-lg bg-white border-hairline text-slate-text font-bold hover:border-teal transition-all" data-demo="men" data-i18n="tab_men">
+            👨 Hombres
+          </button>
+          <button class="matrix-filter-tab px-4 py-2 rounded-lg bg-white border-hairline text-slate-text font-bold hover:border-teal transition-all" data-demo="women" data-i18n="tab_women">
+            👩 Mujeres
+          </button>
+          <button class="matrix-filter-tab px-4 py-2 rounded-lg bg-white border-hairline text-slate-text font-bold hover:border-teal transition-all" data-demo="kids" data-i18n="tab_kids">
+            👶 Niños
+          </button>
+          <button class="matrix-filter-tab px-4 py-2 rounded-lg bg-white border-hairline text-slate-text font-bold hover:border-teal transition-all" data-demo="surgeries" data-i18n="tab_surgeries">
+            🔬 Robótica & Láser
+          </button>
+        </div>
+      </div>
+
+      <!-- Injected from app.js (Demographic Matrix) -->
+      <div id="demographic-matrix-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Rendered by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Digital Clinical Intake Slip (Interactive Prescription Slip Generator) -->
+  <section id="triaje" class="py-16 sm:py-24 border-hairline-b bg-ivory">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Intake Slip Explanation -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-gold block" data-i18n="intake_tag">
+            RECEPCIÓN CLÍNICA DIRECTA
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-heading" data-i18n="intake_title">
+            Papeleta de Consulta Digital
+          </h2>
+          <p class="text-sm sm:text-base text-slate-text leading-relaxed" data-i18n-html="intake_desc">
+            Para coordinar su valoración de forma eficiente, complete este formulario clínico preliminar. Se generará un <strong>Folio de Consulta Único</strong> y se transmitirá directamente al consultorio del Dr. Favio Salinas G. vía WhatsApp oficial.
+          </p>
+          
+          <div class="p-5 rounded-2xl bg-white border-hairline space-y-3 font-mono text-xs text-[#385B66]">
+            <div class="flex items-center gap-2 font-bold text-heading">
+              <i data-lucide="check-circle" class="w-4 h-4 text-teal"></i>
+              <span data-i18n="intake_safe_title">Atención Confidencial y Ética</span>
+            </div>
+            <p class="text-[11px] text-slate pl-6 leading-relaxed" data-i18n="intake_safe_desc">
+              Toda la información es recibida únicamente por el equipo médico del consultorio para preparar su expediente clínico previo a su llegada.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Authentic Paper Prescription / Slip Form -->
+        <div class="lg:col-span-7">
+          <div class="paper-prescription rounded-3xl p-6 sm:p-10">
+            
+            <!-- Prescription Slip Header -->
+            <div class="flex items-center justify-between pb-6 border-hairline-b mb-6 font-mono text-xs">
+              <div>
+                <span class="font-serif font-bold text-xl text-heading block">Dr. Favio Salinas G.</span>
+                <span class="text-slate text-[10px] uppercase">Cirujano Urólogo • Ced. 4967773 / 7308544 / 09610780</span>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] text-slate uppercase block" data-i18n="slip_label_folio">FOLIO DIGITAL</span>
+                <span id="slip-folio-id" class="text-teal font-bold text-sm">FS-7482</span>
+                <span id="slip-date" class="text-[10px] text-slate block mt-0.5">17 Oct 2026</span>
+              </div>
+            </div>
+
+            <!-- Form Fields -->
+            <form id="clinical-slip-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-mono text-xs font-bold text-heading mb-1 uppercase tracking-wider" data-i18n="lbl_patient_name">Nombre del Paciente</label>
+                  <input type="text" id="triage-patient-name" required placeholder="Nombre y Apellidos" data-i18n-placeholder="placeholder_patient_name" class="w-full px-4 py-2.5 rounded-xl border border-hairline bg-ivory text-sm focus:outline-none focus:border-teal">
+                </div>
+                <div>
+                  <label class="block font-mono text-xs font-bold text-heading mb-1 uppercase tracking-wider" data-i18n="lbl_patient_phone">Teléfono / WhatsApp</label>
+                  <input type="tel" id="triage-patient-phone" required placeholder="Ej. 867 123 4567" data-i18n-placeholder="placeholder_patient_phone" class="w-full px-4 py-2.5 rounded-xl border border-hairline bg-ivory text-sm focus:outline-none focus:border-teal">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-mono text-xs font-bold text-heading mb-1 uppercase tracking-wider" data-i18n="lbl_demographic">Perfil del Paciente</label>
+                  <select id="triage-demographic" class="w-full px-4 py-2.5 rounded-xl border border-hairline bg-ivory text-sm focus:outline-none focus:border-teal">
+                    <option value="Hombre Adulto" data-i18n="opt_demo_men">Hombre (Salud Prostática / Andrología)</option>
+                    <option value="Mujer Adulta" data-i18n="opt_demo_women">Mujer (Litiasis / Incontinencia)</option>
+                    <option value="Pediátrico" data-i18n="opt_demo_kids">Pediátrico / Niño(a)</option>
+                    <option value="Segunda Opinión" data-i18n="opt_demo_opinion">Segunda Opinión Quirúrgica</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block font-mono text-xs font-bold text-heading mb-1 uppercase tracking-wider" data-i18n="lbl_urgency">Prioridad / Urgencia</label>
+                  <select id="triage-urgency" class="w-full px-4 py-2.5 rounded-xl border border-hairline bg-ivory text-sm focus:outline-none focus:border-teal">
+                    <option value="Programada (Esta semana)" data-i18n="opt_urg_routine">Programada (Esta semana)</option>
+                    <option value="Urgente (Dolor / Cólico)" data-i18n="opt_urg_urgent">Urgente (Dolor / Cólico Renal)</option>
+                    <option value="Paciente de Texas / Fin de semana" data-i18n="opt_urg_border">Paciente de Texas / Fin de semana</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-mono text-xs font-bold text-heading mb-1 uppercase tracking-wider" data-i18n="lbl_concern">Motivo Principal de Consulta</label>
+                <select id="triage-concern" class="w-full px-4 py-2.5 rounded-xl border border-hairline bg-ivory text-sm focus:outline-none focus:border-teal">
+                  <option value="Valoración Prostática / Láser HoLEP" data-i18n="opt_con_holep">Valoración Prostática / Láser HoLEP</option>
+                  <option value="Cálculos Renales / Cólico" data-i18n="opt_con_stones">Litiasis Renal (Piedras en el riñón / Vejiga)</option>
+                  <option value="Hiperplasia Prostática Benigna (HPB)" data-i18n="opt_con_bph">Hiperplasia Prostática Benigna (HPB)</option>
+                  <option value="Cirugía Robótica / Laparoscópica" data-i18n="opt_con_robotics">Cirugía Robótica o Laparoscópica</option>
+                  <option value="Oncología (Tumor de próstata, vejiga o riñón)" data-i18n="opt_con_onco">Oncología Urológica</option>
+                  <option value="Infertilidad Masculina / Disfunción Eréctil" data-i18n="opt_con_fert">Infertilidad Masculina / Disfunción Eréctil</option>
+                  <option value="Incontinencia Urinaria Femenina" data-i18n="opt_con_incont">Incontinencia Urinaria Femenina</option>
+                  <option value="Urología Pediátrica" data-i18n="opt_con_ped">Urología Pediátrica</option>
+                  <option value="Chequeo Urológico Preventivo" data-i18n="opt_con_checkup">Chequeo Urológico Preventivo General</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block font-mono text-xs font-bold text-heading mb-1 uppercase tracking-wider" data-i18n="lbl_notes">Síntomas o Estudios Previos (Opcional)</label>
+                <textarea id="triage-notes" rows="2" placeholder="Ej. APE elevado, ultrasonido reciente, dolor en fosa renal..." data-i18n-placeholder="placeholder_notes" class="w-full px-4 py-2 rounded-xl border border-hairline bg-ivory text-sm focus:outline-none focus:border-teal"></textarea>
+              </div>
+
+              <div class="pt-3">
+                <button type="button" id="slip-send-btn" class="btn-surgical w-full py-4 rounded-xl font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span data-i18n="btn_send_slip">Transmitir Papeleta al WhatsApp del Doctor</span>
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cross-Border Corridor: Nuevo Laredo — Laredo, Texas (Bespoke Feature) -->
+  <section id="binacional" class="py-16 sm:py-24 border-hairline-b bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-gold block" data-i18n="border_tag">
+            CORREDOR MÉDICO TRANSFRONTERIZO
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-heading" data-i18n="border_title">
+            Atención para Pacientes de Texas y Estados Unidos
+          </h2>
+          <p class="text-sm sm:text-base text-slate-text leading-relaxed" data-i18n="border_desc">
+            Ubicados estratégicamente en Nuevo Laredo, Tamaulipas, a escasos minutos de los cruces internacionales. Brindamos atención bilingüe con los más altos estándares quirúrgicos y costos significativamente más accesibles que en EE.UU.
+          </p>
+
+          <div class="space-y-3 font-mono text-xs">
+            <div class="p-4 rounded-xl bg-ivory border-hairline flex items-center gap-3">
+              <i data-lucide="receipt" class="w-5 h-5 text-gold shrink-0"></i>
+              <span data-i18n="border_point_1">Facturación médica con desglose para reembolso internacional (HSA / FSA / Seguros).</span>
+            </div>
+            <div class="p-4 rounded-xl bg-ivory border-hairline flex items-center gap-3">
+              <i data-lucide="languages" class="w-5 h-5 text-teal shrink-0"></i>
+              <span data-i18n="border_point_2">Personal 100% bilingüe (English & Spanish spoken fluently).</span>
+            </div>
+          </div>
+
+          <!-- Bridge Navigation Selector -->
+          <div class="pt-2">
+            <div class="flex items-center gap-2 font-mono text-xs mb-3">
+              <button id="btn-route-p1" class="px-3.5 py-1.5 rounded-lg border border-teal bg-teal-tint text-teal font-bold transition-all" data-i18n="btn_route_p1">
+                Desde Puente I (Puerta de las Américas)
+              </button>
+              <button id="btn-route-p2" class="px-3.5 py-1.5 rounded-lg border border-[#DCE7EA] bg-white text-slate-text font-bold hover:border-teal transition-all" data-i18n="btn_route_p2">
+                Desde Puente II (Juárez-Lincoln)
+              </button>
+            </div>
+
+            <div id="route-info-p1" class="p-4 rounded-xl bg-ivory border-hairline text-xs space-y-1">
+              <strong class="text-heading font-mono block" data-i18n="route_p1_title">Tiempo estimado: 7 a 9 minutos en automóvil</strong>
+              <p class="text-slate-text" data-i18n="route_p1_desc">Cruzar por Puente I hacia Nuevo Laredo, incorporarse directamente por Av. Vicente Guerrero hacia el sur hasta Av. Benito Juárez 2713.</p>
+            </div>
+
+            <div id="route-info-p2" class="p-4 rounded-xl bg-ivory border-hairline text-xs space-y-1 hidden">
+              <strong class="text-heading font-mono block" data-i18n="route_p2_title">Tiempo estimado: 9 a 12 minutos en automóvil</strong>
+              <p class="text-slate-text" data-i18n="route_p2_desc">Al salir de la garita de Puente II, continuar por Av. César López de Lara y virar al poniente hacia Av. Benito Juárez 2713, Col. Juárez.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Direct View -->
+        <div class="lg:col-span-6">
+          <div class="dossier-card rounded-3xl p-4 border-hairline bg-white shadow-soft">
+            <div class="rounded-2xl overflow-hidden h-80 sm:h-96 relative border border-hairline">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.771960249581!2d-99.5109315!3d27.4878345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866123a65c929a73%3A0xbce5c156f7e44a03!2sAv.%20Benito%20Ju%C3%A1rez%202713%2C%20Ju%C3%A1rez%2C%2088209%20Nuevo%20Laredo%2C%20Tamps.!5e0!3m2!1ses!2smx!4v1710000000000!5m2!1ses!2smx" 
+                class="w-full h-full border-0" 
+                allowfullscreen="" 
+                loading="lazy" 
+                title="Ubicación Dr. Favio Salinas G.">
+              </iframe>
+              <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-3 rounded-xl border border-hairline shadow-md flex items-center justify-between font-mono text-xs">
+                <div>
+                  <span class="font-bold text-heading block" data-i18n="map_badge_addr">Av. Benito Juárez 2713, Col. Juárez</span>
+                  <span class="text-[10px] text-slate" data-i18n="map_badge_city">Nuevo Laredo, Tamaulipas</span>
+                </div>
+                <a href="https://maps.app.goo.gl/Ho2dFL6XgpH4BFFQ7" target="_blank" class="btn-surgical px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase" data-i18n="btn_gps">
+                  Ruta GPS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Doctor's Official Educational Video & Social Channel Hub -->
+  <section class="py-16 sm:py-24 border-hairline-b bg-ivory">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-gold block mb-2" data-i18n="social_tag">
+            CANALES DE DIVULGACIÓN MÉDICA
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-heading" data-i18n="social_title">
+            Siga al Dr. Favio Salinas G. en Redes Oficiales
+          </h2>
+        </div>
+        <p class="font-mono text-xs text-slate max-w-sm" data-i18n="social_desc">
+          Educación urológica continua, casos quirúrgicos explicados y prevención para pacientes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/c/FavioSalinas" target="_blank" class="dossier-card rounded-2xl p-6 border-hairline hover:border-teal group block">
+          <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="youtube" class="w-6 h-6"></i>
+          </div>
+          <span class="font-mono text-xs text-slate uppercase block" data-i18n="yt_badge">Canal de YouTube</span>
+          <h3 class="font-serif font-bold text-xl text-heading group-hover:text-teal transition-colors">@FavioSalinas</h3>
+          <p class="text-xs text-slate-text mt-2" data-i18n="yt_desc">Videos explicativos sobre HoLEP, litiasis y cirugía robótica.</p>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@drfaviosalinas" target="_blank" class="dossier-card rounded-2xl p-6 border-hairline hover:border-teal group block">
+          <div class="w-12 h-12 rounded-xl bg-sky-light text-teal flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="video" class="w-6 h-6"></i>
+          </div>
+          <span class="font-mono text-xs text-slate uppercase block" data-i18n="tt_badge">TikTok Oficial</span>
+          <h3 class="font-serif font-bold text-xl text-heading group-hover:text-teal transition-colors">@drfaviosalinas</h3>
+          <p class="text-xs text-slate-text mt-2" data-i18n="tt_desc">Cápsulas cortas de salud prostática, mitos y síntomas de alerta.</p>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/urologonuevolaredo/" target="_blank" class="dossier-card rounded-2xl p-6 border-hairline hover:border-teal group block">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="facebook" class="w-6 h-6"></i>
+          </div>
+          <span class="font-mono text-xs text-slate uppercase block" data-i18n="fb_badge">Comunidad Facebook</span>
+          <h3 class="font-serif font-bold text-xl text-heading group-hover:text-teal transition-colors">Urólogo Nuevo Laredo</h3>
+          <p class="text-xs text-slate-text mt-2" data-i18n="fb_desc">Noticias del consultorio, testimonios y fechas de consulta.</p>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/drfaviosalinas/" target="_blank" class="dossier-card rounded-2xl p-6 border-hairline hover:border-teal group block">
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+          </div>
+          <span class="font-mono text-xs text-slate uppercase block" data-i18n="ig_badge">Instagram Clínico</span>
+          <h3 class="font-serif font-bold text-xl text-heading group-hover:text-teal transition-colors">@drfaviosalinas</h3>
+          <p class="text-xs text-slate-text mt-2" data-i18n="ig_desc">Actualizaciones de procedimientos y actividades médicas.</p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Architectural Minimalist Light Footer -->
+  <footer id="contacto" class="bg-white border-t border-hairline pt-16 pb-12 text-slate-text">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-hairline-b">
+        
+        <!-- Brand & License Dossier -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-ivory border-hairline flex items-center justify-center text-teal font-serif font-bold text-lg">
+              FS
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-xl text-heading">Dr. Favio Salinas G.</h3>
+              <p class="font-mono text-[11px] text-gold font-bold" data-i18n="footer_role">Cirujano Urólogo de Alta Especialidad</p>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-text leading-relaxed" data-i18n="footer_cert">
+            Certificado por el Consejo Nacional Mexicano de Urología A.C. Práctica privada dedicada al tratamiento vanguardista de enfermedades de riñón, vejiga y próstata.
+          </p>
+
+          <div class="p-3 rounded-xl bg-ivory border-hairline font-mono text-[11px] space-y-1 text-slate">
+            <div><span data-i18n="footer_ced_1">Médico Cirujano:</span> <strong class="text-heading">Ced. 4967773</strong></div>
+            <div><span data-i18n="footer_ced_2">Especialidad en Urología:</span> <strong class="text-heading">Ced. 7308544</strong></div>
+            <div><span data-i18n="footer_ced_3">Certificación Consejo Mexicano:</span> <strong class="text-heading">Ced. 09610780</strong></div>
+          </div>
+        </div>
+
+        <!-- Headquarters & Direct Lines -->
+        <div class="md:col-span-4 space-y-3 font-mono text-xs">
+          <span class="text-slate uppercase font-bold tracking-widest block mb-2" data-i18n="footer_clinic_title">Consultorio Principal</span>
+          <div class="space-y-2">
+            <div class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+              <span>Av. Benito Juárez 2713, Col. Juárez, C.P. 88209, Nuevo Laredo, Tamps.</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-teal shrink-0"></i>
+              <span>Tel: <a href="tel:8677144361" class="font-bold text-heading hover:text-teal">867 714 4361</a></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>WhatsApp: <a href="https://api.whatsapp.com/send?phone=+528677415761&text=" target="_blank" class="font-bold text-heading hover:text-teal">+52 867 741 5761</a></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-slate shrink-0"></i>
+              <span>Email: <a href="mailto:drfaviosalinas@gmail.com" class="font-bold text-heading hover:text-teal">drfaviosalinas@gmail.com</a></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consultation Hours -->
+        <div class="md:col-span-3 space-y-3 font-mono text-xs">
+          <span class="text-slate uppercase font-bold tracking-widest block mb-2" data-i18n="footer_hours_title">Horario Clínico</span>
+          <div class="p-4 rounded-xl bg-ivory border-hairline space-y-1.5">
+            <div class="flex justify-between">
+              <span data-i18n="footer_hours_mf">Lunes a Viernes:</span>
+              <strong class="text-heading">9:00 - 19:00</strong>
+            </div>
+            <div class="flex justify-between">
+              <span data-i18n="footer_hours_sat">Sábados:</span>
+              <strong class="text-heading">9:00 - 14:00</strong>
+            </div>
+            <div class="text-[10px] text-slate pt-2 border-hairline-b" data-i18n="footer_hours_note">
+              *Urgencias de litiasis renal con recepción prioritaria.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal Colophon -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between font-mono text-[11px] text-slate gap-4">
+        <div data-i18n="footer_copy">
+          © 2026 Dr. Favio Salinas G. • Todos los derechos reservados.
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://www.stnet.com.mx/" target="_blank" class="hover:text-teal transition-colors" data-i18n="footer_design">Diseño │ www.stnet.com.mx</a>
+          <span>•</span>
+          <span data-i18n="footer_loc">Nuevo Laredo, Tamaulipas, México</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Direct Speed Dial Dock -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
+    <a href="tel:8677144361" class="w-12 h-12 rounded-full bg-white text-teal border border-hairline shadow-lg hover:shadow-xl flex items-center justify-center transition-all" title="Llamar directo al 867 714 4361" data-i18n-title="float_call_title">
+      <i data-lucide="phone" class="w-5 h-5"></i>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=+528677415761&text=Hola%20Dr.%20Favio%20Salinas%20G.,%20solicito%20información%20para%20una%20consulta" target="_blank" class="btn-surgical w-14 h-14 rounded-full shadow-xl flex items-center justify-center hover:scale-105 transition-all" title="WhatsApp Inmediato" data-i18n-title="float_wa_title">
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./app.js"></script>
+</body>
+</html>
