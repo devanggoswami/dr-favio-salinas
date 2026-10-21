@@ -228,6 +228,20 @@
       gap: 12px;
     }
 
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cta-text-mobile {
+      display: none;
+    }
+
+    .cta-text-full {
+      display: inline;
+    }
+
     .brand {
       display: flex;
       align-items: center;
@@ -1578,44 +1592,107 @@
         padding-right: 14px !important;
       }
 
+      /* 5 & 6. Sticky Floating Pill Header on Mobile */
       .header-wrap {
-        padding: 0 8px !important;
+        position: sticky !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1000 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        pointer-events: none !important;
+        background: transparent !important;
       }
 
       .navbar {
-        padding: 7px 10px !important;
-        gap: 6px !important;
+        pointer-events: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        padding: 8px 12px !important;
+        margin: 8px 12px !important;
+        width: auto !important;
+        border-radius: 999px !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 8px 24px -4px rgba(46, 74, 87, 0.12), 0 2px 6px rgba(30, 140, 140, 0.04) !important;
+        box-sizing: border-box !important;
       }
 
+      /* 1. Only 3 visible items: Logo (left), Toggle (center), CTA button (right) */
+      .navbar-actions {
+        display: contents !important;
+      }
+
+      /* 2. Brand: Hide name & title on mobile (< 640px), only show logo on left */
       .brand {
-        gap: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0 !important;
+        flex-shrink: 0 !important;
+        order: 1 !important;
       }
 
       .brand-logo {
-        width: 28px !important;
-        height: 32px !important;
+        width: 30px !important;
+        height: 35px !important;
+        display: block !important;
       }
 
-      .brand-name {
-        font-size: 14px !important;
-      }
-
+      .brand-text,
+      .brand-name,
       .brand-title {
         display: none !important;
       }
 
+      /* 4. EN/ES toggle buttons: min-width 44px, min-height 36px, font-size 13px */
+      .lang-switch {
+        order: 2 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        padding: 2px !important;
+        gap: 2px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .lang-btn {
+        min-width: 44px !important;
+        min-height: 36px !important;
+        font-size: 13px !important;
+        padding: 0 4px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 9999px !important;
+      }
+
+      /* Hide Call button on mobile */
       .nav-btn-call {
         display: none !important;
       }
 
-      .nav-btn {
-        padding: 7px 12px !important;
-        font-size: 12.5px !important;
+      /* 3. Compact CTA button: text "Book", padding 10px 14px, font-size 13px, white-space nowrap */
+      .nav-btn-cta {
+        order: 3 !important;
+        flex-shrink: 0 !important;
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+        white-space: nowrap !important;
+        line-height: 1 !important;
       }
 
-      .lang-btn {
-        padding: 3px 6px !important;
-        font-size: 10.5px !important;
+      .cta-text-full {
+        display: none !important;
+      }
+
+      .cta-text-mobile {
+        display: inline !important;
       }
 
       .hero-glass-card {
@@ -1663,13 +1740,16 @@
         </ul>
       </nav>
 
-      <div style="display: flex; align-items: center; gap: 8px;">
+      <div class="navbar-actions">
         <div class="lang-switch" role="group" aria-label="Language Selector">
           <button type="button" class="lang-btn active" data-lang="en">EN</button>
           <button type="button" class="lang-btn" data-lang="es">ES</button>
         </div>
         <a href="tel:8677144361" class="btn btn-outline nav-btn nav-btn-call" style="padding: 9px 16px; font-size: 13.5px;" data-i18n="nav_call">Call</a>
-        <a href="booking.html" class="btn btn-teal nav-btn" data-i18n="nav_schedule">Schedule visit</a>
+        <a href="booking.html" class="btn btn-teal nav-btn nav-btn-cta">
+          <span class="cta-text-full" data-i18n="nav_schedule">Schedule visit</span>
+          <span class="cta-text-mobile" data-i18n="nav_book">Book</span>
+        </a>
       </div>
     </header>
   </div>
@@ -2042,6 +2122,7 @@
           nav_contact: "Contact",
           nav_call: "Call",
           nav_schedule: "Schedule visit",
+          nav_book: "Book",
           hero_title: `Urology care that feels <span class="accent-calm">calm</span>, personal and precise.`,
           hero_lead: "Treatment and prevention of urological diseases for men, women and kids, from a certified surgeon in Nuevo Laredo, Tamps.",
           hero_schedule: "Schedule your appointment",
@@ -2126,6 +2207,7 @@
           nav_contact: "Contacto",
           nav_call: "Llamar",
           nav_schedule: "Agendar cita",
+          nav_book: "Agendar",
           hero_title: `Atención urológica que se siente <span class="accent-calm">serena</span>, personal y precisa.`,
           hero_lead: "Tratamiento y prevención de enfermedades urológicas para hombres, mujeres y niños, con un cirujano certificado en Nuevo Laredo, Tamps.",
           hero_schedule: "Agendar su cita",
