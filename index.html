@@ -1158,7 +1158,14 @@
       }
 
       .header-wrap {
-        padding: 0 12px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        padding: 14px 14px 0 !important;
+        width: 100% !important;
+        pointer-events: auto !important;
+        z-index: 10 !important;
       }
 
       .navbar {
@@ -1184,10 +1191,10 @@
         font-size: 13px;
       }
 
-      /* Hero Section: Move Doctor Profile Card to TOP on mobile */
+      /* Hero Section: Move Doctor Profile Card to TOP on mobile, positioned cleanly below non-sticky navbar */
       .hero-section {
-        padding-top: 24px;
-        padding-bottom: 56px;
+        padding-top: 16px !important;
+        padding-bottom: 56px !important;
       }
 
       .hero-grid {
@@ -1201,26 +1208,29 @@
         width: 100% !important;
         display: flex !important;
         justify-content: center !important;
+        margin-top: 4px !important;
         margin-bottom: 4px !important;
       }
 
       .hero-glass-card {
         width: 100% !important;
         max-width: 380px !important;
-        padding: 28px 22px !important;
+        padding: 32px 22px 28px !important;
         border-radius: 28px !important;
         box-sizing: border-box !important;
         box-shadow: 0 16px 40px -10px rgba(30, 140, 140, 0.16), 0 4px 16px rgba(46, 74, 87, 0.05) !important;
         margin: 0 auto !important;
+        animation: none !important;
       }
 
       .card-avatar-wrap {
+        margin-top: 2px !important;
         margin-bottom: 18px !important;
       }
 
       .card-avatar {
-        width: 112px !important;
-        height: 112px !important;
+        width: 116px !important;
+        height: 116px !important;
         border-width: 3.5px !important;
       }
 
@@ -1610,13 +1620,13 @@
 
       .hero-glass-card {
         max-width: 100% !important;
-        padding: 24px 16px !important;
+        padding: 28px 16px 22px !important;
         border-radius: 24px !important;
       }
 
       .card-avatar {
-        width: 104px !important;
-        height: 104px !important;
+        width: 108px !important;
+        height: 108px !important;
       }
     }
 
