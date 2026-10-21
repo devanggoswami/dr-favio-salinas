@@ -1794,7 +1794,7 @@
           <button type="button" class="lang-btn" data-lang="es">ES</button>
         </div>
         <a href="tel:8677144361" class="btn btn-outline nav-btn nav-btn-call" style="padding: 9px 16px; font-size: 13.5px;" data-i18n="nav_call">Call</a>
-        <a href="booking.html" class="btn btn-teal nav-btn nav-btn-cta">
+        <a href="https://api.whatsapp.com/send?phone=+528677415761" target="_blank" rel="noopener" class="btn btn-teal nav-btn nav-btn-cta wa-appointment-link">
           <span class="cta-text-full" data-i18n="nav_schedule">Schedule visit</span>
           <span class="cta-text-mobile" data-i18n="nav_book">Book</span>
         </a>
@@ -1821,7 +1821,7 @@
             Treatment and prevention of urological diseases for men, women and kids, from a certified surgeon in Nuevo Laredo, Tamps.
           </p>
           <div class="hero-actions">
-            <a href="booking.html" class="btn btn-teal" data-i18n="hero_schedule">Schedule your appointment</a>
+            <a href="https://api.whatsapp.com/send?phone=+528677415761" target="_blank" rel="noopener" class="btn btn-teal wa-appointment-link" data-i18n="hero_schedule">Schedule your appointment</a>
             <a href="#services" class="btn btn-outline" data-i18n="hero_services">See services</a>
           </div>
         </div>
@@ -2022,8 +2022,8 @@
               Modern laser treatment for benign prostatic hyperplasia, offering minimal bleeding, quick recovery, and lasting relief without incisions.
             </p>
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-              <a href="booking.html?service=holep" class="btn btn-teal" data-i18n="holep_btn_sched">Schedule HOLEP visit</a>
-              <a href="https://api.whatsapp.com/send?phone=+528677415761&text=Hello%20Dr.%20Favio%20Salinas,%20I%20would%20like%20to%20ask%20about%20the%20HOLEP%20procedure." target="_blank" rel="noopener" class="btn btn-white" data-i18n="holep_btn_wa">Ask via WhatsApp</a>
+              <a href="https://api.whatsapp.com/send?phone=+528677415761&text=Hola%20Dr.%20Favio%20Salinas,%20deseo%20consultar%20sobre%20el%20procedimiento%20HOLEP." target="_blank" rel="noopener" class="btn btn-teal wa-holep-link" data-i18n="holep_btn_sched">Schedule HOLEP visit</a>
+              <a href="https://api.whatsapp.com/send?phone=+528677415761&text=Hello%20Dr.%20Favio%20Salinas,%20I%20would%20like%20to%20ask%20about%20the%20HOLEP%20procedure." target="_blank" rel="noopener" class="btn btn-white wa-holep-link" data-i18n="holep_btn_wa">Ask via WhatsApp</a>
             </div>
           </div>
 
@@ -2123,13 +2123,13 @@
             <div class="action-card-top">
               <h3 data-i18n="contact_book_title">Book your visit</h3>
               <p data-i18n="contact_book_desc">
-                Choose your service and time slot directly online, or get in touch via phone or WhatsApp in a calm, welcoming environment.
+                Get in touch directly via WhatsApp or phone to schedule your visit in a calm, welcoming environment.
               </p>
             </div>
 
             <div class="action-buttons">
-              <a href="booking.html" class="btn btn-teal" data-i18n="contact_book_btn">Schedule appointment online</a>
-              <a href="https://api.whatsapp.com/send?phone=+528677415761" target="_blank" rel="noopener" class="btn btn-white">WhatsApp</a>
+              <a href="https://api.whatsapp.com/send?phone=+528677415761" target="_blank" rel="noopener" class="btn btn-teal wa-appointment-link" data-i18n="contact_book_btn">Schedule appointment via WhatsApp</a>
+              <a href="tel:8677144361" class="btn btn-white" data-i18n="contact_call_btn">Call (867) 714-4361</a>
             </div>
 
             <div class="social-pills-row">
@@ -2242,8 +2242,9 @@
           contact_phone_lbl: "Phone",
           contact_email_lbl: "Email",
           contact_book_title: "Book your visit",
-          contact_book_desc: "Choose your service and time slot directly online, or get in touch via phone or WhatsApp in a calm, welcoming environment.",
-          contact_book_btn: "Schedule appointment online",
+          contact_book_desc: "Get in touch directly via WhatsApp or phone to schedule your visit in a calm, welcoming environment.",
+          contact_book_btn: "Schedule appointment via WhatsApp",
+          contact_call_btn: "Call (867) 714-4361",
           contact_follow: "Follow Dr. Favio Salinas G.",
           footer_text: "© Dr. Favio Salinas G. · Urological Surgeon · Ced. Prof. 4967773 / 7308544 / 09610780"
         },
@@ -2327,8 +2328,9 @@
           contact_phone_lbl: "Teléfono",
           contact_email_lbl: "Correo",
           contact_book_title: "Reserve su consulta",
-          contact_book_desc: "Seleccione su servicio y horario directamente en línea, o contáctenos por teléfono o WhatsApp en un entorno sereno y acogedor.",
-          contact_book_btn: "Agendar cita en línea",
+          contact_book_desc: "Contáctenos directamente por WhatsApp o teléfono para agendar su consulta en un entorno sereno y acogedor.",
+          contact_book_btn: "Agendar cita por WhatsApp",
+          contact_call_btn: "Llamar al (867) 714-4361",
           contact_follow: "Siga al Dr. Favio Salinas G.",
           footer_text: "© Dr. Favio Salinas G. · Cirujano Urólogo · Céd. Prof. 4967773 / 7308544 / 09610780"
         }
@@ -2345,6 +2347,21 @@
           if (translations[lang][key]) {
             el.innerHTML = translations[lang][key];
           }
+        });
+
+        // Update WhatsApp appointment links with pre-filled message in current language
+        const waAppointmentMsg = lang === 'en'
+          ? encodeURIComponent("Hello Dr. Favio Salinas, I would like to schedule an appointment.")
+          : encodeURIComponent("Hola Dr. Favio Salinas, deseo agendar una consulta.");
+        document.querySelectorAll('a.wa-appointment-link').forEach(link => {
+          link.href = `https://api.whatsapp.com/send?phone=+528677415761&text=${waAppointmentMsg}`;
+        });
+
+        const waHolepMsg = lang === 'en'
+          ? encodeURIComponent("Hello Dr. Favio Salinas, I would like to ask about the HOLEP procedure.")
+          : encodeURIComponent("Hola Dr. Favio Salinas, deseo consultar sobre el procedimiento HOLEP.");
+        document.querySelectorAll('a.wa-holep-link').forEach(link => {
+          link.href = `https://api.whatsapp.com/send?phone=+528677415761&text=${waHolepMsg}`;
         });
 
         // Update active states on language buttons
