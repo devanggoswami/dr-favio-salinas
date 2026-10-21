@@ -175,12 +175,23 @@
       box-shadow: 0 4px 12px -2px rgba(30, 140, 140, 0.25) !important;
     }
 
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
     .tilt-card {
       position: relative;
       transform-style: preserve-3d;
       will-change: transform;
       transition: transform 0.18s cubic-bezier(0.2, 0, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
       overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Keep card content in front of specular reflections so text is never washed out */
+    .tilt-card > *:not(.tilt-glare) {
+      position: relative;
+      z-index: 2;
     }
 
     .tilt-glare {
@@ -188,14 +199,33 @@
       inset: 0;
       border-radius: inherit;
       pointer-events: none;
-      background: radial-gradient(circle 280px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.65), transparent 75%);
+      background: radial-gradient(circle 260px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.22), transparent 70%);
       opacity: 0;
       transition: opacity 0.3s ease;
-      z-index: 5;
+      z-index: 1; /* Below text, never obscures ink text */
     }
 
-    .tilt-card:hover .tilt-glare {
-      opacity: 1;
+    /* Only show specular glare on desktop devices that have fine hover pointer */
+    @media (hover: hover) and (pointer: fine) {
+      .tilt-card:hover .tilt-glare {
+        opacity: 1;
+      }
+    }
+
+    /* Tactile 3D touch micro-interactions for touch devices */
+    @media (hover: none) {
+      .tilt-card:active {
+        transform: perspective(900px) scale3d(0.988, 0.988, 0.988) translateZ(-4px) !important;
+        box-shadow: 0 8px 22px -6px rgba(30, 140, 140, 0.15) !important;
+        transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+      }
+
+      .service-card:active {
+        transform: scale(0.985) translateY(1px) !important;
+        border-color: var(--teal) !important;
+        box-shadow: 0 8px 20px -6px rgba(30, 140, 140, 0.18) !important;
+        transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+      }
     }
 
     /* 1. Floating Sticky Glass Pill Navbar (Fixed so it sticks reliably on scroll) */
@@ -1226,26 +1256,42 @@
         margin-bottom: 4px !important;
       }
 
+      @keyframes mobile3DFloat {
+        0%, 100% {
+          transform: perspective(900px) translateY(0) rotateX(0deg);
+        }
+        50% {
+          transform: perspective(900px) translateY(-4px) rotateX(0.75deg);
+        }
+      }
+
       .hero-glass-card {
         width: 100% !important;
         max-width: 380px !important;
         padding: 32px 22px 28px !important;
         border-radius: 28px !important;
         box-sizing: border-box !important;
-        box-shadow: 0 16px 40px -10px rgba(30, 140, 140, 0.16), 0 4px 16px rgba(46, 74, 87, 0.05) !important;
+        background: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 18px 42px -10px rgba(30, 140, 140, 0.16), 0 4px 14px rgba(46, 74, 87, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
         margin: 0 auto !important;
-        animation: none !important;
+        transform-style: preserve-3d !important;
+        animation: mobile3DFloat 7s ease-in-out infinite !important;
       }
 
       .card-avatar-wrap {
         margin-top: 2px !important;
         margin-bottom: 18px !important;
+        transform: translateZ(12px) !important;
       }
 
       .card-avatar {
         width: 116px !important;
         height: 116px !important;
         border-width: 3.5px !important;
+        box-shadow: 0 12px 28px -6px rgba(30, 140, 140, 0.26), 0 0 0 2px rgba(255, 255, 255, 0.9) !important;
       }
 
       .card-avatar img {
@@ -1259,6 +1305,8 @@
         padding: 4px !important;
         bottom: 1px !important;
         right: 1px !important;
+        transform: translateZ(18px) !important;
+        box-shadow: 0 4px 14px rgba(30, 140, 140, 0.28) !important;
       }
 
       .card-name {
@@ -2361,27 +2409,56 @@
         });
       });
 
-      // 3D Touch Tilt & Dynamic Specular Reflection
+      // 3D Tilt & Specular Physics (Smooth on desktop, tactile 3D on mobile without white glare)
       const tiltCards = document.querySelectorAll('.tilt-card');
       tiltCards.forEach(card => {
+        let isTouching = false;
+
+        card.addEventListener('pointerdown', (e) => {
+          if (e.pointerType === 'touch') {
+            isTouching = true;
+            card.style.transition = 'transform 0.12s ease, box-shadow 0.12s ease';
+            card.style.transform = 'perspective(900px) scale3d(0.988, 0.988, 0.988) translateZ(-4px)';
+          }
+        });
+
         card.addEventListener('pointermove', (e) => {
+          if (e.pointerType === 'touch' && !isTouching) return;
+
           const rect = card.getBoundingClientRect();
           const x = e.clientX - rect.left;
           const y = e.clientY - rect.top;
           
-          const xPercent = (x / rect.width) * 100;
-          const yPercent = (y / rect.height) * 100;
-          const rotateX = ((y / rect.height) - 0.5) * -10;
-          const rotateY = ((x / rect.width) - 0.5) * 10;
+          if (e.pointerType === 'mouse') {
+            const xPercent = (x / rect.width) * 100;
+            const yPercent = (y / rect.height) * 100;
+            const rotateX = ((y / rect.height) - 0.5) * -8;
+            const rotateY = ((x / rect.width) - 0.5) * 8;
 
-          card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
-          card.style.setProperty('--mouse-x', `${xPercent}%`);
-          card.style.setProperty('--mouse-y', `${yPercent}%`);
+            card.style.transition = 'transform 0.08s ease-out';
+            card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.012, 1.012, 1.012)`;
+            card.style.setProperty('--mouse-x', `${xPercent}%`);
+            card.style.setProperty('--mouse-y', `${yPercent}%`);
+          } else if (e.pointerType === 'touch' && isTouching) {
+            // Very gentle micro-tilt on mobile drag (max ±3deg) so text remains 100% crisp and readable
+            const rotateX = ((y / rect.height) - 0.5) * -3;
+            const rotateY = ((x / rect.width) - 0.5) * 3;
+            card.style.transition = 'transform 0.08s ease-out';
+            card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(0.99, 0.99, 0.99)`;
+          }
         });
 
-        card.addEventListener('pointerleave', () => {
+        const resetCard = () => {
+          isTouching = false;
+          card.style.transition = 'transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease';
           card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-        });
+          card.style.removeProperty('--mouse-x');
+          card.style.removeProperty('--mouse-y');
+        };
+
+        card.addEventListener('pointerup', resetCard);
+        card.addEventListener('pointercancel', resetCard);
+        card.addEventListener('pointerleave', resetCard);
       });
     })();
   </script>
